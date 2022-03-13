@@ -1,0 +1,80 @@
+---
+title: "Gun cases per day"
+author: "Micah Clark Moody"
+date: "3/2/2022"
+output: html_document
+---
+
+# Load required packages
+```{r setup}
+library(tidyverse)
+library(lubridate)
+library(knitr)
+```
+
+# Import and clean data
+```{r} 
+# importing data
+# read.csv("~/bond_court/2022 Data (original)/2022_03.08_Data.csv")
+
+# cleaning data
+bond_data <- `2022_03.08_Data`
+
+bond_data$can_post <- as.numeric(bond_data$can_post) 
+
+bond_data$bond_amount <- as.numeric(bond_data$bond_amount)
+
+bond_data <- bond_data %>%
+  select(judge, can_post, bond_amount, bond_type) %>%
+  filter(bond_type == "D") %>%
+  drop_na() %>%
+  mutate("bond_excess" = ifelse(((can_post * 10) < bond_amount), 1, 0)) 
+```
+
+# Judge bond type
+```{r}
+judges <- `2022_03.08_Data`%>%
+  filter(judge != "?", bond_type != "") %>%
+  group_by(bond_type, judge) %>%
+  summarize(n())
+
+judge_total <- `2022_03.08_Data` %>%
+  filter(judge != "?", bond_type != "") %>%
+  group_by(judge) %>%
+  summarise(n()) %>%
+  rename("total_cases" = "n()")
+
+judges <- full_join(judges, judge_total) %>%
+  mutate("percent" = `n()` / `total_cases`)
+
+ggplot(judges, mapping = aes(
+  x = bond_type,
+  y = `percent`
+)) +
+  geom_col() +
+  scale_y_continuous(labels = scales::percent) +
+  facet_wrap(facets = "judge") + 
+  labs(
+    title = "Percentage of Bond Type by Judge",
+    x = "Bond Type",
+    y = "Percentage of Total Bonds"
+  )
+
+kable(judge_total)
+```
+
+# Judges excessive bond
+```{r}
+bond_data_grouped <- bond_data %>%
+  group_by(judge, bond_excess) %>%
+  summarize(n()) %>%
+  filter(judge != "?")
+  
+ggplot(bond_data_grouped, mapping = aes(
+    x = bond_excess,
+    y = `n()`
+  )) +
+    geom_col() +
+  facet_wrap(facets = "judge")
+```
+
