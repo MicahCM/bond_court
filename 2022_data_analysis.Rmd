@@ -13,32 +13,34 @@ library(knitr)
 ```
 
 # Import and clean data
+- make import reproducible (get rid of desktop path)
+- in .csv remove ASA, atty, and columns after "notes"
 ```{r} 
 # importing data
-# read.csv("~/bond_court/2022 Data (original)/2022_03.08_Data.csv")
+data <- read.csv("~/Desktop/r/bond_court/2022 Data (original)/data_cleaned.csv")
 
-# cleaning data
-bond_data <- `2022_03.08_Data`
+data$can_post <- as.numeric(data$can_post) 
 
-bond_data$can_post <- as.numeric(bond_data$can_post) 
+data$bond_amount <- as.numeric(data$bond_amount)
 
-bond_data$bond_amount <- as.numeric(bond_data$bond_amount)
-
-bond_data <- bond_data %>%
-  select(judge, can_post, bond_amount, bond_type) %>%
+test <- data %>%
+  select(date, case, judge, can_post, bond_amount, bond_type) %>%
   filter(bond_type == "D") %>%
   drop_na() %>%
-  mutate("bond_excess" = ifelse(((can_post * 10) < bond_amount), 1, 0)) 
+  mutate("bond_excess" = ifelse(((can_post * 10) < bond_amount), 1, 0))
+
+data <- left_join(data, test)
 ```
 
-# Judge bond type
+# Breaking down data by judge
+## Bond type for each judge
 ```{r}
-judges <- `2022_03.08_Data`%>%
+judges <- data %>%
   filter(judge != "?", bond_type != "") %>%
   group_by(bond_type, judge) %>%
   summarize(n())
 
-judge_total <- `2022_03.08_Data` %>%
+judge_total <- data %>%
   filter(judge != "?", bond_type != "") %>%
   group_by(judge) %>%
   summarise(n()) %>%
@@ -63,18 +65,7 @@ ggplot(judges, mapping = aes(
 kable(judge_total)
 ```
 
-# Judges excessive bond
+## Excessive bond for each judge
 ```{r}
-bond_data_grouped <- bond_data %>%
-  group_by(judge, bond_excess) %>%
-  summarize(n()) %>%
-  filter(judge != "?")
-  
-ggplot(bond_data_grouped, mapping = aes(
-    x = bond_excess,
-    y = `n()`
-  )) +
-    geom_col() +
-  facet_wrap(facets = "judge")
 ```
 
