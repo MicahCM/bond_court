@@ -15,15 +15,21 @@ library(knitr)
 # Import and clean data
 - make import reproducible (get rid of desktop path)
 - in .csv remove ASA, atty, and columns after "notes"
-```{r} 
+- fix 35 and add the join to the pipe
+- update with atty names deleted
+- vector charge_type to be in order
+```{r, setup} 
 # importing data
-data <- read.csv("~/Desktop/r/bond_court/2022 Data (original)/data_cleaned.csv")
+data <- read.csv("~/Desktop/r/bond_court/data_cleaned.csv")
 
+# coercing numeric variables
 data$can_post <- as.numeric(data$can_post) 
 
 data$bond_amount <- as.numeric(data$bond_amount)
 
-test <- data %>%
+# creating dummy variable for excessive bond
+# NOT WORKING YET
+data <- data %>%
   select(date, case, judge, can_post, bond_amount, bond_type) %>%
   filter(bond_type == "D") %>%
   drop_na() %>%
@@ -34,22 +40,24 @@ data <- left_join(data, test)
 
 # Breaking down data by judge
 ## Bond type for each judge
-```{r}
-judges <- data %>%
+Question: What is the percentage use of each bond type by judge?
+
+```{r, bond_type_by_judge}
+judge_bond <- data %>%
   filter(judge != "?", bond_type != "") %>%
   group_by(bond_type, judge) %>%
   summarize(n())
 
-judge_total <- data %>%
+judge <- data %>%
   filter(judge != "?", bond_type != "") %>%
   group_by(judge) %>%
   summarise(n()) %>%
   rename("total_cases" = "n()")
 
-judges <- full_join(judges, judge_total) %>%
+judge_bond <- full_join(judge_bond, judge) %>%
   mutate("percent" = `n()` / `total_cases`)
 
-ggplot(judges, mapping = aes(
+ggplot(judge_bond, mapping = aes(
   x = bond_type,
   y = `percent`
 )) +
@@ -62,10 +70,61 @@ ggplot(judges, mapping = aes(
     y = "Percentage of Total Bonds"
   )
 
-kable(judge_total)
+kable(judge)
 ```
 
 ## Excessive bond for each judge
-```{r}
+Question: What percentage of cases where judges assign a D-bond is that bond in excess of what defendants can post?
+
+```{r, excessive_bond_by_judge}
+data %>%
+  filter(judge != "?", !is.na(bond_excess)) %>%
+  ggplot(mapping = aes(
+    x = judge,
+    y = bond_excess
+)) +
+  geom_bar(stat = "summary")
 ```
 
+# Breaking down EM information
+***Limitation:*** Judges do not consistently state or explain EM conditions. For example, "5000 D with a monitor" would be a common ruling but it is not clear the conditions of monitoring. For this reason, I don't distinguish between types of EM. I am also concerned there is an under count of cases with EM so I will not compare EM to the total number of cases, instead limiting my analysis to the cases that are positively identified as having judge-assigned EM.
+
+## Cases with EM information
+Question: what cases have EM as a condition? Were these charges legally eligible for pretrial incarceration?
+
+```{r, EM}
+# charges that are ELIGIBLE for pretrial incarceration
+# importing .csv summarizing probation-eligible charges. See prob_eligible$link for citations
+prob_eligible <- read.csv("~/Desktop/r/bond_court/prob_eligible.csv")
+
+# number of EM conditions by charge category
+data %>%
+  filter(condition == "EM") %>%
+  group_by(charge_type) %>%
+  ggplot(mapping = aes(
+    x = charge_type
+  )) +
+  geom_bar() +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+
+# table of charges
+EM <- data %>%
+  filter(condition == "EM", class_1 != "Unknown") %>%
+  group_by(class_1, charge_1) %>%
+  select(class_1, charge_1) %>%
+  summarise(total = n()) %>%
+  full_join(prob_eligible) %>%
+  select(-c("law","link")) %>%
+  drop_na()
+
+kable(EM) 
+
+# total incarceration elegible versus not eligible
+EM %>%
+  ggplot(mapping = aes(
+    x = probation_eligible,
+    y = total
+  )) +
+  geom_col()
+
+```

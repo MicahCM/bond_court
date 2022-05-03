@@ -8,6 +8,7 @@
 - Bond Court
 - Pretrial
 - Bond
+- Github: if you're new to Github or coding in r, don't fear! The documents that end ".Rmd" will be a bit hard to follow, these are the code, but if you read text with a "#" in front of it the steps should be explained. Around or before 2022-06-04 there will be documents formatted like reports with the graphs but without the code that will be more accessible. 
 
 > __I-Bond:__ Release without paying money     
 > _Example: "10,000 I" means release without paying any money_     
@@ -61,10 +62,15 @@ There are several important limitations to the 2022 courtwatching data.
 ### Timeline
 
 1. 2022-05-02: Data published
-1. 2022-06-04: Data analysis completed
+1. 2022-06-04: Data analysis completed, format as accessible documents, graphs will be labled and pretty
 1. 2022-07-29: Final paper uploaded
 1. Additional memos may be published as interesting findings emerge
 
 # Learn more about bond
 
 - 
+
+### Sources
+
+_For EM charts_
+- [List of non-probationable offenses](https://illinoiscaselaw.com/sentencing-index/)
