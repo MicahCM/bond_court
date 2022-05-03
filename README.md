@@ -3,6 +3,14 @@
 <br>
 *By Micah Clark Moody*
 
+> ***WELCOME!*** This is a project under construction. Here's the timeline...
+>
+> - 2022-05-02: Data published
+> - 2022-05-03: Brief EM memo finished
+> - 2022-06-04: Data analysis completed. ***This is when analysis will be edited, graphs formatted, documents published without code, and full analysis ready for critique.***
+> - 2022-07-29: Final paper uploaded
+> - Additional memos may be published as interesting findings emerge
+
 ### Context
 
 - Bond Court
@@ -58,13 +66,6 @@ There are several important limitations to the 2022 courtwatching data.
 - _Uneven coverage of judges:_
 - _Over representation of weekend calls:_
 - _Over representation of call beginnings:_ 
-
-### Timeline
-
-1. 2022-05-02: Data published
-1. 2022-06-04: Data analysis completed, format as accessible documents, graphs will be labled and pretty
-1. 2022-07-29: Final paper uploaded
-1. Additional memos may be published as interesting findings emerge
 
 # Learn more about bond
 
