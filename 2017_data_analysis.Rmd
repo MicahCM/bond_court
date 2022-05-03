@@ -1,0 +1,298 @@
+---
+title: "2017_data_analysis"
+author: "Micah Clark Moody"
+date: '2022-05-03'
+output: html_document
+---
+
+# Introduction
+
+### Bond Court Context
+When someone is arrested in Cook County, they are held in custody until a bond court hearing when the conditions of their release are set. For more serious cases, charged as felonies, people who have been arrested are put in custody by a police officer, taken to the Cook County Jail, and then appear in central felony bond court.
+
+When a person is released, the judge sets a "bail bond." This can include cash bail which means the defendant is required to pay money to the court and the court holds that money. If the case concludes and the defendant appears at all court dates and complies with all bond conditions that money is returned to the defendant. In addition to bail, the judge can set conditions of release. These can range from surrendering a drivers license or gun license to being placed on house arrest with electronic monitoring. These conditions are important, deeply impacting defendants lives, but will not be the focus of this analysis. For more excellent context on pretrial conditions see the writing of [Chicago Appleseed](https://www.chicagoappleseed.org/2021/09/22/10-facts-about-pretrial-electronic-monitoring-in-cook-county/) and recent [reporting by Block club Chicago](https://blockclubchicago.org/2021/09/27/cook-county-mulls-revamp-of-ballooning-electronic-monitoring-program-as-criticism-mounts/).
+
+In addition to conditions of release, a bond is issued. There are four types of bond as outlined in [725 ILCS 5/110-5](https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072500050K110-5):     
+     
+__I-Bond:__ Release without paying money     
+_Example: "10,000 I" means release without paying any money_     
+__D-Bond:__ Release after paying 10% of the bond amount     
+_Example: "10,000 D" means release after paying $1,000_      
+__C-Bond:__ Release after paying the full bond amount     
+_Example: "10,000 C" means release after paying $10,000_     
+__N-Bond:__ Refereed to generally as "no bail", the defendant is held in jail     
+       
+After the bond hearing, every defendant is given both a bond and conditions of release.
+
+### 2017 bond Court Policy Change
+On September 18, 2017, [General Order 18.8A](https://www.cookcountycourt.org/Manage/Division-Orders/View-Division-Order/ArticleId/2562/GENERAL-ORDER-NO-18-8A-Procedures-for-Bail-Hearings-and-Pretrial-Release) was issued by the Chief Judge changing the rules of bond court to "ensure no defendant is held in custody prior to trial solely because the defendant cannot afford to post bail." This policy change was in response to years of organizing and advocating for an decrease reliance on cash bail. This created a disruption in bond court, requiring facts be presented about a defendants ability to pay and be considered by the judge on the record. Further, for a judge sets bail in excess of what a defendant can pay after September 18. 2017, judges have to make an additional ruling explaining their decision.
+
+To create accountability and transparency on the implementation of this order, the _Coalition to End Money Bond_ and _Chicago Appleseed Foundation for Fair Courts_, two civic society groups, organized a court watching project to observe bond court and record case and bond information before and after the implementation of order 18.8A. they used this data to publish a [report on the order](http://www.chicagoappleseed.org/wp-content/uploads/2018/02/Courtwatching-Report_Coalition-to-End-Money-Bond_FINAL_2-25-18.pdf). Beyond this report, they also published their data in Github repositories managed by the [Chicago Data Collaborative](https://gitlab.com/ChicagoDataCooperative) for anyone to analyze. 
+
+### This report
+In this report, I will rely on the [courtwatching data repository](https://gitlab.com/ChicagoDataCooperative/court-observation/-/tree/master) based on data collected by volunteer courtwatchers who physically attended court and recorded observations for each case. A description of the coding guide can be found [here](https://gitlab.com/ChicagoDataCooperative/court-observation/-/blob/master/data_processing.Rmd), and I will also explain the variables relevant to this analysis throughout. I will also rely on the [bond court disposition](https://gitlab.com/ChicagoDataCooperative/bond-court-dispositions) repository created through freedom of information act responses by the Cook County sheriff's office.
+
+In this report I am asking, __what is the relationship between limiting cash bail have on holding people no bail?__ 
+
+This question is crucial to contextualize and motivate my thesis research. For my thesis, I am conducting an ethography and interviews to identify the structure of bond court today and suggesting possible impacts of the January 1, 2023 implementation of the [Pretrial Fairness Act](https://endmoneybond.org/pretrialfairness/) (PFA). The PFA is a state law that extends on the work of Order 18.8A, eliminating case bail altogether. I am particularly focused on non-violent possession crimes, such as gun possession, which present volatile questions about the definition of violence, dangerousness, and racist stereotypes of criminality alongside real inequity in gun violence victimization in Chicago. One expression of all these questions will be whether there is an increase in no-bond rulings applied to gun possession charges that, but for the PFA, would have received D-Bonds. Because my thesis is focused on gun possession, I will be particularly interested in the impact of order 18.8A on bond people charged with gun possession receive.
+
+### Limitations
+Many important questions are left unaddressed in this report. First, I am not considering the pretrial risk assessment or pretrial conditions applied. These are crucial questions taken up from a policy standpoint in [Mariame Kaba's](https://www.haymarketbooks.org/books/1664-we-do-this-til-we-free-us) excellent books and empirically explored by Chicago Appleseed.
+
+Second, important to my research, there is an essential literature around gun violence and victimization. Please see [this report](https://www.luc.edu/media/lucedu/ccj/pdfs/firearmpossessionsentencinginillinois.pdf) on disparity in Illinois, [We Carry Guns to Feel Safe](https://www.urban.org/research/publication/we-carry-guns-stay-safe) for context on gun possession, and [Occupied Territory by Simon Balto](https://uncpress.org/book/9781469659176/occupied-territory/) or [Condemnation of Blackness by Khalil Muhammad](https://www.hup.harvard.edu/catalog.php?isbn=9780674238145) for a history of the racism in criminalization of gun possession.
+
+Finally, I am not analyzing the relationship between race an bond received in this report, though Appleseed did record this data. It is crucial to note at the outset, however, that pretrial incarceration, bond, and supervision are all assigned to Black men at a disproportionate rate according to the [sheriff's reports](https://www.cookcountysheriff.org/data/) on current jail demographics. 
+
+# Setup
+
+### Import required packages
+```{r setup, message = FALSE, warning = FALSE}
+# import required packages
+
+library(lubridate)
+library(tidyverse)
+library(readr)
+library(knitr)
+```
+
+### Import data
+This data is linked to the GitHub repository for the initial data collection project. The codebooks, .csv files, and data cleaning scripts can be viewed at these links:      
+      
+[daily_data](https://gitlab.com/ChicagoDataCooperative/bond-court-dispositions) is the aggregate data from the Cook County sheriff      
+[case_data](https://gitlab.com/ChicagoDataCooperative/court-observation/-/tree/master) is case-level data recorded by court watchers      
+        
+Here, I import the data, re-code variables as needed, and re-name variables used for analysis using snake case formatting. When the same variable (for example "date" and "bond_type") appear in both data sets they are named the same way to limit confusion about what the variable represents. 
+
+```{r, message = FALSE, warning = FALSE}
+# tidying daily_data
+# importing daily_data
+daily_data <- read_csv("https://gitlab.com/ChicagoDataCooperative/bond-court-dispositions/-/raw/master/data/cbc_disposition_stats.csv") %>%
+  rename("N-Bonds" = "No Bail") %>%
+  
+# creating a dummy variable for whether order 18.8A was in effect during an observation
+  mutate("order_18.8A" = if_else(`date` < "2017-09-18", "before", "after")) %>%
+  mutate("order_18.8A" = factor(order_18.8A, levels = c("before", "after")))
+
+# re-coding numeric variable imported as character due to a typo in the data
+daily_data$`Not Admitted to EM Prg` <- as.numeric(daily_data$`Not Admitted to EM Prg`)
+
+# tidying case_data
+# importing case_data
+case_data <- read_csv("https://gitlab.com/ChicagoDataCooperative/court-observation/-/raw/master/aug_sept_oct_by_id.csv") %>%
+  rename("date" = "Date", 
+         "bond_type" = "Bond_Type",
+         "max_charge" = "Max_Charge")
+
+# re-coding bond type to be standardized
+case_data$bond_type <- recode(case_data$bond_type,
+                              "I-bond" = "I",
+                              "IEM" = "I", 
+                              "D-bond" = "D", 
+                              "C-bond" = "C", 
+                              "No Bond" = "N")
+
+# re-coding charge type to more user-friendly text explanation
+case_data$max_charge <- case_data$max_charge %>%
+  as.character() %>%
+  recode("1" = "traffic, non-DUI",
+         "2" = "traffic, DUI",
+         "3" = "drug possession",
+         "4" = "drug sales",
+         "5" = "gun possession",
+         "6" = "retail theft",
+         "7" = "other property crimes",
+         "8" = "robbery",
+         "9" = "aggravated battery",
+         "10" = "murder",
+         "11" = "crimes against person")
+
+# re-coding "date" column from character to date
+case_data_date <- str_split(case_data$date, ", ", n = 2, simplify = TRUE) %>%
+  as.data.frame() %>%
+  select(-V1)
+
+case_data$date <- mdy(case_data_date$V2)
+
+# creating a dummy variable for whether order 18.8A was in effect during an observation
+case_data <- case_data %>%
+  mutate("order_18.8A" = if_else(`date` < "2017-09-18", "before", "after")) %>%
+  mutate("order_18.8A" = factor(order_18.8A, levels = c("before", "after")))
+
+# counting the number of C-Bonds
+c_bond_count <- case_data %>%
+  filter(bond_type == "C") %>%
+  count()
+```
+
+# Distribution of bond types before and after implementation
+
+### Daily bond types
+__Question:__ what is the distribution of bond types each day?
+
+__Interpretation:__ while this graph is incredibly messy, showing spikes from day-to-day, there is a clear shift around September 18th when the green (D-bonds) become less common than the red (I-bonds) at a consistent rate. This suggests Order 18.8A had an effect. To check, I will calculate the distribution of bond types overall.
+
+__Data note:__ I am dropping C-bonds from the analysis. C bonds are incredibly rare, appearing only `r c_bond_count` times. From my observation of bond court 5 times a week, this matches my expectations, as it is exceedingly rare for a C-bond to be ordered (in fact I don't recall ever hearing one and don't have one in my notes). Thus, I will remove c-bonds from my analysis.
+
+```{r bond_type_daily}
+
+# calculating distribution of bond types each day
+bond_type <- daily_data %>%
+  select(`N-Bonds`, `I-Bonds`, `D-Bonds`, `TOTAL CASES`, `date`, `order_18.8A`) %>%
+  
+# calculating daily percentages by type
+  mutate(
+    percent_N = (`N-Bonds` / `TOTAL CASES`), 
+    percent_I = (`I-Bonds` / `TOTAL CASES`),
+    percent_D = (`D-Bonds` / `TOTAL CASES`)) %>%
+  
+# assigning to one column
+  pivot_longer(
+    cols = starts_with("per"),
+    names_to = c(".value", "bond_type"),
+    names_sep = -1) %>%
+  rename("percent" = "percent_") %>%
+  mutate(bond_type = factor(bond_type, levels = c("I", "D", "N")))
+
+# creating data visualization
+ggplot(data = bond_type, mapping = aes(
+    x = date,
+    y = percent,
+    color = bond_type)) +
+  geom_line() +
+
+# controlling graph aesthetics
+  scale_y_continuous(labels = scales::percent) +
+  scale_color_manual(name = "Bond Type", values = c("cornflowerblue", "darkgrey", "red")) +
+  labs(title = "Daily Cook County Felony Bond Type Distribution",
+    x = "Date",
+    y = "Percent of total bonds",
+    caption = "Source: Chicago Data Collaborative") +
+  theme_minimal()
+```
+
+### Overall bond types before and after order 18.8A
+
+__Question:__ are D-bonds more prevelant before Order 18.8A is implemented?
+
+__Interpretation:__ yes. There is a significant increase in the percentage of I-Bonds after the order is implemented. Interestingly, there is also an increase in N-Bonds, or no bond given holding the defendant in jail. In future analysis, I am curious if this change is mirrored across charges or if some charges (like drug possession) account for the increase in I-Bonds while others (like more serious charges) account for the increase in N-Bonds.
+
+```{r bond_type_18.8A}
+# grouping bonds by date before and after 18.8A
+bond_type_grouped <- bond_type %>%
+  group_by(`order_18.8A`, `bond_type`) %>%
+  summarize(mean_percent = mean(percent))
+
+# graphing average percentage
+ggplot(data = bond_type_grouped, mapping = aes(
+  x = order_18.8A,
+  y = mean_percent,
+  fill = bond_type)) +
+  geom_col(position = "dodge") +
+
+# controlling graph aesthetics
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(name = "Bond Type", values = c("cornflowerblue", "darkgrey", "red")) +
+  labs(title = "Cook County Felony Bond Type Distribution",
+    x = "Implementation fo Order 18.8A",
+    y = "Percent of total bonds",
+    caption = "Source: Chicago Data Collaborative") +
+  theme_minimal()
+```
+
+# Proportion of no bond rulings before and after order 18.8A
+__Question:__ What cases experienced a increase in the proportion of no bond orders after the amount of cash bail possible was constrainted by order 18.8A?
+
+__Interpretation:__ Here, we can see that serious crimes drove the increase in no-bail rulings. The starkest increase is in murder charges, with all cases having bond denied after September 18th. Robbery, aggrevated battery, crimes against persons, and gun possession are the other 4 charges to experience a significant increase in N-Bonds and a corresponding decrease in D-Bonds.
+
+```{r bond_proportion_by_charge, message = FALSE, warning = FALSE}
+# grouping by charge and finding proportion of each bond type
+bond_by_charge <- case_data %>%
+  
+# selecting relevant variables
+  select(bond_type, max_charge, order_18.8A) %>%
+  drop_na() %>%
+  filter(bond_type != "C") %>%
+  group_by(max_charge, order_18.8A, bond_type) %>%
+  summarise(total = n()) %>%
+  
+# creating count of each bond type
+  pivot_wider(names_from = bond_type,
+              values_from = total) %>%
+  mutate_all(funs(ifelse(is.na(.), 0, .))) %>%
+  mutate(total = sum(I, D, N)) %>%
+
+# calculating percentage of each bond type
+  mutate(percent_N = (N / total),
+    percent_D = (D / total),
+    percent_I = (I / total)) %>%
+ pivot_longer(cols = starts_with("per"),
+    names_to = c(".value", "bond_type"),
+    names_sep = -1) %>%
+  rename("percent" = "percent_") %>%
+  mutate(bond_type = factor(bond_type, levels = c("I", "D", "N")))
+
+# graphing data
+ggplot(bond_by_charge, mapping = aes(
+  x = bond_type,
+  y = percent,
+  fill = order_18.8A)) +
+  geom_col(position = "dodge") +
+  facet_wrap(vars(max_charge)) +
+  
+# controlling graph aesthetics
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_manual(name = "Order 18.8A in Effect", values = c("azure3", "azure4")) +
+  labs(title = "Bonds Type by Charge",
+       subtitle = "Before and after order 18.8A went into effect",
+       y = "Percentage of Total Bonds",
+       x = "Bond Type",
+       caption = "Source: Chicago Data Collaborative") +
+  theme_minimal()
+```
+
+# Charges with the highest porportion of no bond ruling
+
+__Question:__ what charges have the highest rate of bond being denied?
+
+__Interpretation:__ serious felonies, primarily murder, have the highest rates of bond being completly denied. This makes sense, given the condition to deny bond is a finding the defendant posses a danger to an individual or the community.
+
+```{r}
+# isolating no bond after 18.8A in effect
+bond_by_charge %>%
+  filter(bond_type == "N", order_18.8A == "after") %>%
+  
+# graphing data
+  ggplot(mapping = aes(
+    x = reorder(max_charge, percent),
+    y = percent)) +
+  geom_col(fill = "azure4") +
+  coord_flip() +
+  
+# controlling graph aesthetics
+  scale_y_continuous(labels = scales::percent) +
+  labs(title = "Percent No Bond by Charge",
+       subtitle = "After order 18.8A went into effect",
+       y = "Percentage of Bonds by Charge",
+       x = "Maximum Charge in Case",
+       caption = "Source: Chicago Data Collaborative") +
+  theme_minimal()
+```
+
+
+# Conclusions
+
+### Takeaways from this data
+The implementation of order 18.8A on September 18, 2017, appears to have a significant impact on the bonds granted to defendants charged with felonies in Cook County. In the second chart, we see that before order 18.8A D-Bonds, where the defendant posts money, are most common while after the order I-Bonds, where the defendant does not post money, are more common.
+
+At the same time, there is an increase of N-Bonds, where there is no possibility the defendant will be released. This is concentrated amongst the most serious charges but still poses concerns for freedom and due process for defendants charged with the most serious crimes.
+
+### Relevance to my research
+
+This is crucially relevant to motivating my research. The PFA will go into effect on January 1, 2023, creating an even larger disruption to bond court as D-Bonds and C-Bonds go away completly. The impact of this 2017 policy demonstrates an increase in No Bail findings is a possible outcome of the PFA and poses concerns about a possible increase in pretrial incarceration, particularly for charges that are contentious and borderline as to whether or not they are violent. 
+
+This is why I am studying how gun possession, a highly contested concept, is dealt with in bond court today. This data is important historical context to estabilsh the stakes of understanding bond court currently: the ability to forsee and intervene in potential increase in pretrial incarceration in January when the PFA, intended by the legislature to increase pretrial freedom, takes effect.
+
+### Future questions
+There are many open places for analyis in this data. Some have already been explored in [this report](http://www.chicagoappleseed.org/wp-content/uploads/2018/02/Courtwatching-Report_Coalition-to-End-Money-Bond_FINAL_2-25-18.pdf). The impact of pretrial risk assessments, the ability of defendants to pay bond, and the number of people incarcerated due to an inability to post are all areas to explore in the future using this data set.
+
+Gathering new data about the implementation of the PFA will also allow for a comparative study of the impact of bond reform on pretrial detention and unintended consequences of increased incarceration for those charged with serious offenses.
