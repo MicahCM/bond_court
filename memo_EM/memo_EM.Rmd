@@ -1,11 +1,13 @@
 ---
-title: "Electronic monitoring pretrial cannot be compared to incarceration"
+title: "Electronic monitoring pretrial and incarceration are a false comparison: Two Chicago examples"
 author: "Micah Clark Moody"
-date: '2022-05-04'
-output: html_document
+date: "2022-05-04"
+output: 
+  github_document:
+    toc: true
 ---
 
-I've been pondering Gabriela Kirk's insight that prison is so normalized as the response to law violation we think about pretrial electronic monitoring in contrast to incarceration rather than release without conditions [(Kirk 2020)](https://academic.oup.com/socpro/article/68/3/642/5835372?login=true). She writes:
+Putting people in jail is so normalized, electronic monitoring is often framed as a "good" alternative to jail. This is a mistake. Electronic monitoring represents an expansion of the punishment we apply  pretrial and an expansion expansion of the people punished pretrial. I've been thinking about this since reading Gabriela Kirk's excellent article where she looks at academic literature and interviews defendants who have experienced electronic monitoring, finding ***both groups*** compare electronic monitoring to incarceration [(Kirk 2020)](https://academic.oup.com/socpro/article/68/3/642/5835372?login=true). She writes:
 
 > Individuals’ expectations about their legal options and the power of the state to confine both pre- and post-conviction shaped their discussion of its benefits and detriments. Those who believed jail to be the routine and only alternative to their situation minimized the negative collateral consequences they experienced. However, nearly all respondents experienced significant disruption to their lives, particularly to their employment, housing, and family life...To be sure, there are real benefits to avoiding traditional incarceration. However, ***inventing new modes of confinement outside the walls of jails and prisons does not move away from mass incarceration nor does it eliminate the need to be fully attentive to possible negative collateral consequences*** (Kirk 2021, page 643)
 
@@ -13,9 +15,9 @@ Kirk found "For many on [electronic monitoring], this sanction is, in fact, much
 other possible sanctions, such as being out on bond, paying a fine, or attending weekly meetings with
 a probation officer" (2021, page 647).
 
-Advocating against electronic monitoring, the Chicago Appleseed Center for Fair Courts has demonstrated electronic monitoring is used as a punishing version of pretrial rather than a altered pretrial incarceration in their [electronic monitoring fact sheet](https://www.chicagoappleseed.org/wp-content/uploads/2021/11/202109_10-Facts-EM-Cook-County-EM-FINAL-updated.pdf).
+Advocating against electronic monitoring, the Chicago Appleseed Center for Fair Courts has also demonstrated electronic monitoring is used as a punishing version of pretrial rather than a altered pretrial incarceration in their [electronic monitoring fact sheet](https://www.chicagoappleseed.org/wp-content/uploads/2021/11/202109_10-Facts-EM-Cook-County-EM-FINAL-updated.pdf).
 
-***My courtwatching aligns with previous findings that comparing pretrial electronic monitoring with pretrial incarceration is a false comparison*** ([Beckett and Murakawa 2012](); [Kilgore 2013](); [Kirk 2020](); [Chicago Appleseed Center for Fair Courts 2021]()). My conclusion is based on 383 cases in Cook County Bond Court on 17 different days. There several limitations to this data, see this repository [README.md](https://github.com/MicahCM/bond_court/blob/main/README.md) for details. The most important limitation to electronic monitoring analysis it that I likely under counted electronic monitoring conditions because I was only verbally listening to proceedings. Judges do not always verbally state when electronic monitoring is a condition of bond and sometimes I was confused and may have missed conditions. This is why I will not compare electronic monitoring rates to total case numbers.
+***My courtwatching aligns with previous findings that comparing pretrial electronic monitoring with pretrial incarceration is a false comparison*** ([Beckett and Murakawa 2012](https://journals.sagepub.com/doi/10.1177/1362480612442113); [Kilgore 2013](http://www.freedomneverrests.com/wp-content/uploads/2013/11/crit-crim-hard-copy-off-print.pdf); [Kirk 2020](https://academic.oup.com/socpro/article/68/3/642/5835372?login=true); [Chicago Appleseed Center for Fair Courts 2021](https://www.chicagoappleseed.org/wp-content/uploads/2021/11/202109_10-Facts-EM-Cook-County-EM-FINAL-updated.pdf)). My conclusion is based on 383 cases in Cook County Bond Court on 17 different days. There several limitations to this data, see this repository [README.md](https://github.com/MicahCM/bond_court/blob/main/README.md) for details. The most important limitation to electronic monitoring analysis it that I likely under counted electronic monitoring conditions because I was only verbally listening to proceedings. Judges do not always say when electronic monitoring is a condition of bond and sometimes I was confused and may have missed conditions. This is why I will not compare electronic monitoring rates to total case numbers.
 
 ```{r setup,  message = FALSE, warning = FALSE, include = FALSE}
 # importing required packages
@@ -28,7 +30,8 @@ library(knitr)
 data <- read.csv("~/Desktop/r/bond_court/data_cleaned.csv")
 
 # import probation-eligible cases summary
-prob_eligible <- read.csv("~/Desktop/r/bond_court/prob_eligible.csv")
+prob_eligible <- read.csv("~/Desktop/r/bond_court/prob_eligible.csv") %>%
+  mutate(inc_possible = fct_relevel(inc_possible, levels = c("Yes", "Depends on background", "No")))
 
 EM <- data %>%
   filter(condition == "EM", class_1 != "Unknown") %>%
@@ -37,9 +40,6 @@ EM <- data %>%
   summarise(total = n()) %>%
   full_join(prob_eligible) %>%
   drop_na()
-
-# changing dummy variable to character
-EM$probation_eligible <- ifelse(EM$probation_eligible == 1, "Yes", "No")
 ```
 
 # Charges involved
@@ -55,46 +55,67 @@ Naming notes:
 
 ```{r, charge_summary, echo = FALSE}
 EM %>%
-  select(-"probation_eligible") %>%
   drop_na() %>%
   arrange(-total) %>%
-  kable(col.names = c("Class", "Charge", "Total Cases"), caption = "Table: Highest charge in cases where electronic monitoring was a bond condition")
+  kable(col.names = c("Class", "Charge", "Total Cases", "Is pretrial incarceration possible?"), caption = "Table: Most serious charge in cases where electronic monitoring was a bond condition")
 ```
 
-# The majority of people could not be legally incarcerated
+# The possibility of pretrial incarceration
 
-According to Illinois law people can ***only be incarcerated*** pretrial when they are charged with a non-probationable offense listed in [730 ILCS 5/5-5-3](https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3). (It is important to note this law will change when a _Pretrial Fairness Act_ provision takes effect on January 1, 2023). I coded each charge as probationable and non-probationable and incarceration was only a definite legal possibility in 5 of 21 cases. 
+In Illinois, three steps have to be taken for someone to be jailed pretrial:
 
-It is important to note, for some class 2 and 3 charges, it depends on the persons record which I did not record in the data. For example, it is possible a case where the charge is a Class 2 UUW is non-probationable if the defendant has another class 2 conviction from the past 10 years. I choose to code record and enhancement-dependent charges as probationable because the underlying law violation is deemed probationable by the legislature.
+1. Prosecutors charge the defendant with a "non-probationable" felony listed in [this law](https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3) and explained in [this article](https://illinoiscaselaw.com/sentencing-index/)
+1. Prosecutors ask the judge to jail the defendant
+1. The judge agrees with jailing the defendant based on [this law](https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072500050K110-6.1)
+
+### 1. Many defendants on electronic monitoring could ***never*** be incarcerated pretrial
+
+In Illinois, to jail someone pretrial at the beginning of their case they have to be charged with a serious, called "non-probationable", offense listed in the law [730 ILCS 5/5-5-3](https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3). I found ***pretrial incarceration was never a possibility*** as an initial bond condition for 12 of 21 people assigned to electronic monitoring.
 
 ```{r, inc_vulnerable, echo = FALSE}
 EM %>%
-  group_by(probation_eligible) %>%
+  group_by(inc_possible) %>%
   summarize(n()) %>%
   ggplot(mapping = aes(
-    x = probation_eligible,
+    x = inc_possible,
     y = `n()`
   )) +
   geom_col(fill = "darkgreen") +
   
   # controlling graph aesthetics
-  labs(title = "Is the Highest Charge Non-Probationable?",
+  labs(title = "Is Pretrial Incarceration Possible?",
     x = "",
     y = "Total cases observed",
     caption = "Source: Micah's courtwatching, see data_cleaned.csv in this repository") +
   theme_minimal()
 ```
 
+> A few caveats on the "possibility" of pretrial incarceration:
+>
+> - The pretrial law will change on January 1 when the Pretrial Fairness Act goes into effect, see descriptions [here](https://endmoneybond.org/pretrialfairness/)
+> - People charged with less serious cases can be jailed pretrial if they cannot pay enough money for release (called an "unaffordable bond")
+> - People charged with less serious cases can be jailed pretrial if they are accused of "violating" release conditions
+> - People on electronic monitoring can be jailed pretrial if they are accused of "violating" conditions of monitoring and charged with additional felonies if the monitoring unit is damaged or if they are accused of "escape"
 This means pretrial incarceration was not a legal possibility for the majority of people judges assigned to electronic monitoring as apart of their pretrial conditions. 
 
-Further, pretrial incarceration was not an option in any of the cases because incarceration (in almost all cases besides murder charges) requires prosecutors to file a "no bail petition." No bail petitions were not filed in ***a single case*** I have observed where electronic monitoring is a condition of release. Of the 18 no bail petitions I observed, all 18 were granted. This means electronic monitoring was not used as a less restrictive condition or a "prefferred alternative" to incarceration. 
+### 2. Prosecutors never asked to jail the defendants who got electronic monitoring
 
-In Illinois today, comparing electronic monitoring to incarceration pretrial is a false comparison. Kirk, Appleseed, and my data all support this finding. We must compare bond with electronic monitoring to release without electronic monitoring. The majority of cases where people are required to submit to electronic monitoring are cases when people cannot be incarcerated and, even in cases where incarceration is legally possible, electronic monitoring is not being used as a less restrictive condition.
+For a defendant to be jailed pretrial prosecutors have to proactively ask the judge to jail that person. This step was not take in ***a single case*** I observed where electronic monitoring was ultimately a condition of bond. This means none of the people assigned to electronic monitoring could have been jailed without the possibility of release as a result of their initial bond court hearing.
+
+### 3. Electronic monitoring is not being used as an alternative to pretrial jailing
+
+I observed 18 cases where the prosecutor did ask the judge to jail the defendant. In all 18 cases, the Judge  granted that requests and jailed defendants without bond. This means electronic monitoring is ***not being used as a "less restrictive condition*** by judges in their decision to jail people pretrial.
+
+# Conclusion
+
+In Illinois today, comparing electronic monitoring to incarceration pretrial is a false comparison. Kirk, Appleseed, and my courtwatching all support this finding. We must compare bond with electronic monitoring to release without electronic monitoring. The majority of cases where people are required to submit to electronic monitoring are cases when people cannot be incarcerated and, even in cases where incarceration is legally possible, electronic monitoring is not being used as a less restrictive condition.
 
 ### Citations
 Beckett, Katherine, and Naomi Murakawa. 2012. “Mapping the Shadow Carceral State: Toward an Institutionally Capacious Approach to Punishment.” _Theoretical Criminology_ 16(2):221–44.
 
-Appleseed.
+Appleseed Center for Fair Courts. September 2021. "10 Facts About Pretrial Electronic Monitoring in Cook County."
+
+Coalition to End Money Bond. 2020. "Key Accomplishments of the Pretrial Fairness Act." 
 
 Kilgore, James. 2013. “Progress or More of the Same? Electronic Monitoring and Parole in the Age of Mass Incarceration.” _Critical Criminology_ 21(1):123–39.
 
