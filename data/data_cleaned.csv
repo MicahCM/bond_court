@@ -1,375 +1,440 @@
-date,case,judge,atty_type,app_race,gun_case,nole,warrant,charge_type,class_1,charge_1,class_2,charge_2,charge_3,gun_license,violations,can_post,bond_amount,bond_type,condition_notes,condition
-2022-01-15,5,Maryam Ahmad,Private,,0,0,0,9 - murder,X,1st degree murder,Unknown,UUW,,No FOID or CCL,,,,No bond,,
-2022-03-06,19,Kelly McCarthy,Public,black,0,0,0,8 - other crimes against a person,X,1st degree murder,,# - Armed robbery,,,,0,,No bond,,
-2022-01-17,26,Charles S. Beach II,Public,,0,0,1,"2 - traffic, DUI",Unknown,Aggravated DUI,,Warrant,# - Aggravated DUI,,,300,10000,D,EM,EM
-2022-01-20,3,Charles S. Beach II,Private,,0,0,0,"2 - traffic, DUI",4,Aggravated DUI,,,,,,500,,I,PT Monitoring,PT
-2022-01-20,5,Charles S. Beach II,No mitigation,,0,0,0,"2 - traffic, DUI",4,Aggravated DUI,,Misd. - DUI,Misd - Driving on a suspended or revoked license,,,,,I,,
-2022-01-31,2,Kelly McCarthy,No mitigation,,0,0,0,8 - other crimes against a person,Unknown,Aggrevated battery,,,,,,,10000,I,,
-2022-01-31,10,Kelly McCarthy,Public,,0,0,0,8 - other crimes against a person,Unknown,Aggrevated battery,,,,,,0,10000,D,,
-2022-02-23,1,?,Private,,0,0,0,8 - other crimes against a person,3,Aggrevated battery,,,,,,,,,,
-2022-01-17,25,Charles S. Beach II,Public,,0,0,0,10 - other crimes against a person,2,Aggrevated battery of a peace officer,,Misd. - Domestic Battery,Misd. - Battery,,,,30000,D,EM,EM
-2022-02-21,20,?,Public,,0,0,0,8 - other crimes against a person,2,Aggrevated battery of a peace officer,,,,,,0,10000,I,EM curfew,EM
-2022-02-14,4,Maryam Ahmad,Public,,0,0,0,8 - other crimes against a person,2,Aggrevated battery of a peace officer,,2 - Agg Battery to a Peace Officer,2 - Agg Battery to a Peace Officer,,No background,0,3000,D,,
-2022-02-21,17,?,Public,,0,0,0,8 - other crimes against a person,Unknown,Aggrevated battery of a peace officer,,# - Agg damage to prop,# - crim trespass to land,,,,30000,D,,
-2022-02-20,4,Maryam Ahmad,Private,,0,0,1,9 - other,X,Aggrevated discharge using a silencer,,Warrant,,,No background,,,,,
-2022-01-15,18,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Aggrevated vehicular hijacking,,,,,No background,0,750000,D,,
-2022-01-15,15,Maryam Ahmad,Public,,0,0,0,10 - other crimes against a person,1,Aggrevateed assault great bodily harm,1,Aggrevateed assault great bodily harm,Misd - Resisting a peace officer,,,0,100000,D,,
-2022-02-20,9,Maryam Ahmad,Public,,0,0,0,8 - other crimes against a person,3,Aggrevateed battery great bodily harm,,,,,,200,2000,D,,
-2022-01-17,27,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,,400,60000,D,EM,EM
-2022-01-17,11,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",X,AHC,Misd,Driving without a license,,Convicted of a felony,IDOC Hold,1500,50000,D,EM curfew,EM
-2022-01-19,16,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,2 - UUW by a Felon,Misd. - Driving in a sus license,Convicted of a felony,None,1000,10000,D,EM curfew,EM
-2022-01-19,6,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,2,UUW by a felon,,Convicted of a felony,IDOC Hold,1000,100000,D,EM House arrest,EM
-2022-02-02,6,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),X,AHC,,,,,IDOC Hold,2500,25000,D,EM Unspecified,EM
-2022-03-06,31,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,,0,75000,D,EM Unspecified,EM
-2022-01-15,1,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,VOBB,,3000000,D,,
-2022-01-19,15,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,Misd - Resisting a peace officer,,Convicted of a felony,IDOC Hold,500,,No bond,,
-2022-01-26,3,Kelly McCarthy,Private,,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,VOP,2000,,No bond,,
-2022-02-02,18,Mary C. Marubio,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,# - Possession of ammunition,# - Resisting,Convicted of a felony,IDOC Hold,1000,,No bond,,
-2022-02-10,1,Barbara L. Dawkins,Private,,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,VOBB,,,No bond,,
-2022-03-06,37,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),X,AHC,,# - PCann 30 - 100 g,,Convicted of a felony,,,,,,
-2022-02-21,3,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Armed robbery,,,,,VOBB,5000,100000,D,EM Unspecified,EM
-2022-01-15,6,Maryam Ahmad,Public,,0,0,0,8 - robbery,Unknown,Armed robbery,,,,,,,250000,D,,
-2022-02-21,2,?,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Armed robbery,,,,,VOBB,,150000,D,,
-2022-01-15,25,Maryam Ahmad,Public,,0,0,0,10 - other crimes against a person,X,Armed Violence,4,PCS,3 - M&D Cannabis,FOID and CCL,No background,200,100000,D,EM,EM
-2022-02-20,5,Maryam Ahmad,Private,,0,0,0,9 - other,X,Armed Violence,,4 - Agg assault of a PO (x4),4 - PCS Heroin,,IDOC Hold,ns,3000,D,EM Unspecified,EM
-2022-02-23,18,?,Public,,0,0,0,9 - other,X,Armed Violence,,2 - UUW by a Felon,Warrant,Convicted of a felony,,500,150000,D,EM Unspecified,EM
-2022-02-20,36,Maryam Ahmad,Public,,0,0,0,8 - other crimes against a person,X,Attempt 1st degree murder,,2 - Agg domestic battery,,,,1000,200000,D,,
-2022-03-06,5,Kelly McCarthy,Public,black,0,0,0,8 - other crimes against a person,Unknown,Attempt 1st degree murder of a peace officer,,,,,,,1000000,C,,
-2022-01-27,2,Kelly McCarthy,,,0,0,0,8 - other crimes against a person,Unknown,Attempt murder,,,,,,,,,,
-2022-02-07,24,Mary C. Marubio,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Attempt vehicular hijacking,,2 - Attempt vehicular theft,,,,0,100000,D,,
-2022-01-31,1,Kelly McCarthy,Private,,0,0,0,8 - other crimes against a person,Unknown,Battery,,# - Theft,,,,ri,10000,I,,
-2022-01-17,24,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,Misd. - Criminal damage to property,,,,0,,I,EM,EM
-2022-01-19,1,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,2 - burg,2 - burg,,,0,,I,EM House arrest,EM
-2022-01-31,17,Kelly McCarthy,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Burglary,,,,,,ri,10000,I,EM House arrest,EM
-2022-02-02,11,Mary C. Marubio,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,,,,,0,,,EM House arrest,EM
-2022-02-23,15,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,,,,,0,10000,I,EM Unspecified,EM
-2022-03-06,20,Kelly McCarthy,Public,black,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Burglary,,# - Armed robbery,,,,0,7500,D,EM Unspecified,EM
-2022-02-23,7,?,Public,,0,0,1,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,# - Damage to property,Warrant,,,0,10000,D,PT Supervision,PT
-2022-01-31,13,Kelly McCarthy,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Burglary,,# - Crim tresspass,# - Obstructing identification,,,,3000,D,,
-2022-03-06,36,Kelly McCarthy,Public,latino,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Burglary,,# - Theft,,,,0,60000,D,,
-2022-02-23,9,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",4,Criminal damage to property,,,,,,0,5000,D,,
-2022-04-21,18,Charles S. Beach II,Private,Latino,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,"Damage to government property between 500 and 10,000",,,,,,,5000,D,,
-2022-02-02,14,Mary C. Marubio,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",2,Delivery of a controlled substance,,,,,,ns,10000,I,PT Supervision,PT
-2022-02-14,12,Maryam Ahmad,Private,,0,0,1,8 - other crimes against a person,Unknown,Domestic violence,,Warrant,,,,ri,2000,D,EM Unspecified,EM
-2022-03-06,24,Kelly McCarthy,Public,latino,0,1,0,9 - other,Unknown,Drinking on the public way,,,,,Nole,,,,,
-2022-01-17,1,Charles S. Beach II,Private,,0,0,0,"1 - traffic, non-DUI",,Driving on sus or rev license,Misd,Domestic battery,Misd - Unlawful entry to a vehicle,,VOBB,500,10000,D,EM,EM
-2022-04-21,2,Charles S. Beach II,Private,Black,0,1,0,"1 - traffic, non-DUI",Unknown,Driving with a suspended or revoked license,,,,,,,10000,I,6p - 6a curfew no device,EM
-2022-02-23,14,?,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,,,,,0,10000,I,EM Unspecified,EM
-2022-04-21,11,Charles S. Beach II,Private,Latino,0,0,0,"1 - traffic, non-DUI",Unknown,Driving with a suspended or revoked license,,,,,,,10000,I,PT Monitoring,PT
-2022-01-20,19,Charles S. Beach II,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,,,,,,,I,,
-2022-02-02,17,Mary C. Marubio,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,,,,,100,1000,D,,
-2022-02-02,21,Mary C. Marubio,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,,,,,0,1500,D,,
-2022-02-21,13,?,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,4 - AUUW,Muni - Possession of metal piercing bullets,FOID no CCL,,0,10000,I,,
-2022-04-21,4,Charles S. Beach II,Private,Latina,0,0,0,"2 - traffic, DUI",Unknown,DUI,,Misd - driving under the influence of alcohol,,,,,10000,I,PT Supervision,PT
-2022-02-07,5,Mary C. Marubio,Public,,0,0,0,"2 - traffic, DUI",4,DUI,,# - Knowingly having a fake license,,,,ns,10000,I,,
-2022-02-20,28,Maryam Ahmad,Public,,0,0,0,"2 - traffic, DUI",Unknown,DUI,,,,,,300,3000,D,,
-2022-03-06,11,Kelly McCarthy,Public,black,0,0,1,9 - other,Unknown,Escape (EM violation),,Warrant,# - Assault peace officer ,,,ns,40000,D,,
-2022-01-27,1,Kelly McCarthy,Public,,0,0,0,8 - other crimes against a person,Unknown,Extortion / threatening for protection money,,,,,,,,,,
-2022-03-06,14,Kelly McCarthy,Public,black,0,0,1,9 - other,Unknown,Failure to register,,Warrant,,,,1000,10000,D,,
-2022-01-15,17,Maryam Ahmad,Public,,0,0,0,11 - other,4,Fleeing and attempting to allude,2,Possession of a stolen motor vehicle,,,,100,250000,D,EM,EM
-2022-01-19,3,Charles S. Beach II,Private,,0,0,0,9 - other,3,Fleeing and attempting to allude,,Misd. - Driving with sus license,Misd. - driving revoked registration,,No background,,15000,D,PT Supervision,PT
-2022-02-23,16,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Forgery,,,,,,0,3000,D,,
-2022-02-02,4,Mary C. Marubio,Private,,0,0,0,"9 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Home invasion,,Misd - Assault,,,,500,5000,D,PT Supervision,PT
-2022-01-19,19,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Home invasion,,Misd. - Domestic battery,,,,,,No bond,,
-2022-02-02,3,Mary C. Marubio,Private,,0,0,0,"8 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Home invasion,,,,,,500,5000,D,,
-2022-02-14,6,Maryam Ahmad,Public,,0,0,0,"10 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Home invasion,,# - Agg battery with a deadly weapon,,,,,,No bond,,
-2022-01-15,3,Maryam Ahmad,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Identity theft,,,,,VOBB,1000,1000,D,PT Monitoring,PT
-2022-02-20,8,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Identity theft,,,,,,ri,2000,D,,
-2022-02-21,24,?,Public,,0,0,1,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery,,1 - M&D CS,Warrant,,,0,10000,I,EM Unspecified,EM
-2022-01-31,3,Kelly McCarthy,No mitigation,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery,,,,,,,10000,I,,
-2022-02-21,21,?,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery,,4 - PCS,,,VOBB,0,10000,D,,
-2022-01-27,13,Kelly McCarthy,,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery heroin,,,,,,0,10000,D,PT Monitoring,PT
-2022-01-27,14,Kelly McCarthy,,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery heroin,,,,,,0,25000,D,PT Monitoring,PT
-2022-04-21,7,Charles S. Beach II,Private,Black,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery heroin,,1 - MD Cocaine,4 - MD Cannabis,,,250,10000,I,PT Monitoring,PT
-2022-02-07,9,Mary C. Marubio,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",X,Manufacture and delivery heroin,,,,,,ns,10000,I,,
-2022-02-20,6,Maryam Ahmad,Public,,0,1,0,"4 - drug sales (manufacture/delivery, PCS with intent)",X,Manufacture and delivery heroin,,4 - PCS Heroin,4 - PCS Heroin,,Nole,,,,,
-2022-02-20,23,Maryam Ahmad,Public,,0,1,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery heroin,,,,,Nole,,,,,
-2022-02-10,3,Barbara L. Dawkins,Private,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery of a look alike substance,,# - Possession,,,,3000,5000,D,,
-2022-04-21,14,Charles S. Beach II,Private,Black,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",2,Manufacture and delivery of cannabis,,Misd - Crim tresspass to prop,,,,,10000,I,EM curfew,EM
-2022-01-31,4,Kelly McCarthy,Private,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery of cannabis,,,,,VOP,ns,10000,I,PT Monitoring,PT
-2022-02-20,32,Maryam Ahmad,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",3,Manufacture and delivery of cannabis,,Misd - Driving on a suspended license,,,,200,10000,D,PT Monitoring,PT
-2022-01-19,30,Charles S. Beach II,No mitigation,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",2,Manufacture and delivery of cannabis,,,,,,,,I,PT Supervision,PT
-2022-01-15,21,Maryam Ahmad,No mitigation,,0,1,0,"4 - drug sales (manufacture/delivery, PCS with intent)",4,Manufacture and delivery of cannabis,Muni,Soliciting,,,Nole,,,,,
-2022-01-15,27,Maryam Ahmad,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",3,Manufacture and delivery of cannabis,4,PCS,,,VOBB,0,10000,D,,
-2022-01-19,7,Charles S. Beach II,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",3,Manufacture and delivery of cannabis,,,,,,,,I,,
-2022-01-19,28,Charles S. Beach II,No mitigation,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",4,Manufacture and delivery of cannabis,,Misd. - Tresspass to property,,,,,,I,,
-2022-01-20,13,Charles S. Beach II,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery of cannabis,,,,,VOBB,,10000,D,,
-2022-01-27,12,Kelly McCarthy,,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery of cannabis,,,,,,ri,,I,,
-2022-02-20,21,Maryam Ahmad,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",4,Manufacture and delivery of cannabis,,,,,,ri,1000,D,,
-2022-04-21,8,Charles S. Beach II,Private,Black,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",4,Manufacture and delivery of cannabis,,,,,,,10000,I,,
-2022-02-02,23,Mary C. Marubio,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery of cocaine,,3 - M&D Cannabis,,,VOBB,200,2000,D,,
-2022-02-21,11,?,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery of cocaine,,,,,,,10000,I,,
-2022-04-21,6,Charles S. Beach II,Private,Latino,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery of cocaine,,Misd - Unlawful PCann while driver of vehicle,,,,300,,,,
-2022-01-17,28,Charles S. Beach II,Public,,0,0,1,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery of heroin,4,PCS,Warrant,,,,10000,I,,
-2022-02-20,17,Maryam Ahmad,Public,,0,0,0,8 - other crimes against a person,Unknown,Murder,,,,,,8000,,No bond,,
-2022-03-06,4,Kelly McCarthy,Public,black,0,0,0,8 - other crimes against a person,Unknown,Murder,,,,,,,1000000,C,,
-2022-02-10,2,Barbara L. Dawkins,Private,,0,0,0,9 - other,Unknown,Official misconduct,,,,,,500,75000,D,,
-2022-01-15,12,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,3,Manufacture and delivery of cannabis,,,,0,5000,D,EM curfew,EM
-2022-01-20,14,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,VOBB,,,I,EM curfew,EM
-2022-01-20,15,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,,,I,EM curfew,EM
-2022-02-02,20,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,A - Domestic battery,,,IDOC Hold,0,5000,D,EM House arrest,EM
-2022-01-19,17,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,Misd. - Drug para,,,IDOC Hold,0,,I,EM Unspecified,EM
-2022-02-20,19,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,,I,EM Unspecified,EM
-2022-02-21,10,?,Public,,0,0,1,3 - drug possession (PCS),4,PCS,,4 - drug paraphanalia,Warrant (DV),,,0,10000,I,EM Unspecified,EM
-2022-02-21,22,?,Public,,0,0,1,3 - drug possession (PCS),4,PCS,,Warrant,,,,0,10000,I,EM Unspecified,EM
-2022-01-17,12,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),2,PCS,4,PCS,,,,0,,I,PT Supervision,PT
-2022-01-27,7,Kelly McCarthy,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,200,2000,D,PT Supervision,PT
-2022-02-02,13,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,ns,10000,I,PT Supervision,PT
-2022-02-07,13,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,A - DUI,A - DV,,,300,5000,D,PT Supervision,PT
-2022-02-07,27,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,ns,10000,I,PT Supervision,PT
-2022-02-07,28,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,Misd - Possession of drug paraphanalia,,,,ns,10000,I,PT Supervision,PT
-2022-02-07,31,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,ri,10000,I,PT Supervision,PT
-2022-02-14,9,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,Misd - Retail theft,Misd - Retail theft,,,0,3000,D,PT Supervision,PT
-2022-04-21,10,Charles S. Beach II,Private,Black,0,0,1,3 - drug possession (PCS),4,PCS,,,,,,,10000,I,PT Supervision,PT
-2022-04-21,13,Charles S. Beach II,Private,Black,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,10000,I,PT Supervision,PT
-2022-04-21,15,Charles S. Beach II,Private,Black,0,0,0,3 - drug possession (PCS),4,PCS,,4 - PCS,,,,,10000,I,PT Supervision,PT
-2022-01-20,17,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,# - PCS,,,VOBB,,,I,PT Supervision - curfew,PT
-2022-01-20,1,Charles S. Beach II,Private,,0,0,0,3 - drug possession (PCS),1,PCS,,4 - AUUW,4 - AUUW,FOID no CCL,No background,3000,10000,D,"PT Supervision, curfew",PT
-2022-01-17,22,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,4 - PCS,,,No background,,,I,,
-2022-01-17,29,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),4,PCS,Misd,DUI,Misd. - Leaving the scene of an accident,,,,5000,D,,
-2022-01-19,4,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,No background,,,I,,
-2022-01-19,22,Charles S. Beach II,No mitigation,,0,0,0,3 - drug possession (PCS),1,PCS,,4 - PCS,,,,,,I,,
-2022-01-19,23,Charles S. Beach II,No mitigation,,0,0,1,3 - drug possession (PCS),Unknown,PCS,,Warrant,Warrant,,,,,I,,
-2022-01-19,25,Charles S. Beach II,No mitigation,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,,,I,,
-2022-01-20,16,Charles S. Beach II,No mitigation,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,,,I,,
-2022-01-26,2,Kelly McCarthy,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,VOBB,ri,25000,I,,
-2022-01-27,5,Kelly McCarthy,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,ri,10000,I,,
-2022-01-27,10,Kelly McCarthy,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,# Drug paraphanalia,,,Nole,,,,,
-2022-01-31,15,Kelly McCarthy,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,,,,Nole,,,,,
-2022-01-31,18,Kelly McCarthy,No mitigation,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,,10000,I,,
-2022-01-31,21,Kelly McCarthy,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,,,,Nole,,,,,
-2022-02-02,10,Mary C. Marubio,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,,,,Nole,,,,,
-2022-02-07,6,Mary C. Marubio,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,# - PCS,,,Nole,,,,,
-2022-02-07,8,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,60,600,D,,
-2022-02-07,14,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,VOBB,ns,10000,I,,
-2022-02-07,16,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,IDOC Hold,ns,900,D,,
-2022-02-07,29,Mary C. Marubio,No mitigation,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,
-2022-02-10,8,Barbara L. Dawkins,,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,ns,,I,,
-2022-02-14,3,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,
-2022-02-20,1,Maryam Ahmad,Public,,0,0,1,3 - drug possession (PCS),4,PCS,,Warrant,,,VOP,ri,1000,D,,
-2022-02-20,11,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,
-2022-02-20,12,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,,,,
-2022-02-20,14,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,,,,
-2022-02-20,15,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,
-2022-02-20,22,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,
-2022-02-20,31,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,
-2022-02-20,33,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,4 - Unlawful PCS,4 - Unlawful PCS,,,500,1500,D,,
-2022-02-21,5,?,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,IDOC Hold,,,I,,
-2022-02-21,28,?,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,10000,I,,
-2022-03-06,10,Kelly McCarthy,Public,black,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,0,5000,D,,
-2022-03-06,13,Kelly McCarthy,Public,white,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,0,5000,D,,
-2022-03-06,17,Kelly McCarthy,Public,black,0,0,0,3 - drug possession (PCS),Unknown,PCS,,Misd reckless conduct,,,VOP,50,2000,D,,
-2022-02-07,12,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,200,10000,I,PT Supervision,PT
-2022-02-07,15,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,100,10000,I,PT Supervision,PT
-2022-02-23,6,?,,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,,10000,I,PT Supervision,PT
-2022-02-23,8,?,Public,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,IDOC Hold,200,2000,D,PT Supervision,PT
-2022-01-20,8,Charles S. Beach II,No mitigation,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,,,I,,
-2022-02-07,35,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,ns,10000,I,,
-2022-02-14,5,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS Heroin,,4 - PCrack,,,VOBB,0,3000,D,EM curfew,EM
-2022-03-06,2,Kelly McCarthy,Private,black,0,0,1,3 - drug possession (PCS),Unknown,PCS Heroin,,# - M&D Heroin,Warrant,,,,10000,D,PT Monitoring,PT
-2022-02-23,11,?,Public,,0,0,0,3 - drug possession (PCS),1,PCS Heroin,,,,,,,,,,
-2022-01-17,13,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,Possession of a firearm with a defaced serial number,4,UUW,2 - P Stolen Firearm,No FOID or CCL,No background,300,5000,D,,
-2022-01-17,14,Charles S. Beach II,Public,,0,0,0,"5 - gun possession (first time, AUUW class 4)",3,Possession of a revoked FOID card,4,UUW,,No FOID or CCL,,,5000,D,PT Supervision,PT
-2022-04-21,9,Charles S. Beach II,Private,Black,0,0,0,3 - drug possession (PCS),2,Possession of a schedule 1 or 2 narcotic,,,,,,,10000,I,PT Supervision,PT
-2022-04-21,12,Charles S. Beach II,Private,Black,0,0,0,3 - drug possession (PCS),2,Possession of a schedule 1 or 2 narcotic,,4 - MD Cannabis,,,,,10000,I,PT Supervision,PT
-2022-02-20,24,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),2,Possession of a schedule 1 or 2 narcotic,,,,,,100,1000,D,,
-2022-01-26,4,Kelly McCarthy,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Possession of a stolen motor vehicle,,,,,,100,1000,D,EM curfew,EM
-2022-02-21,4,?,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Possession of a stolen motor vehicle,,2 - Agg fleeing and alluding,# - Speeding,,VOBB,1000,100000,D,EM Unspecified,EM
-2022-02-20,37,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Possession of a stolen motor vehicle,,4 - PCS,,,,100,1000,D,PT Supervision,PT
-2022-01-19,21,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Possession of a stolen motor vehicle,,,,,No background,0,,I,,
-2022-01-27,4,Kelly McCarthy,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Possession of a stolen motor vehicle,,,,,VOBB,ns,30000,D,,
-2022-02-14,8,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Possession of a stolen motor vehicle,,,,,,,,,,
-2022-03-06,29,Kelly McCarthy,Public,black,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Possession of a stolen motor vehicle,,# - Fleeing a police officer,,,,,10000,D,,
-2022-01-27,9,Kelly McCarthy,Public,,0,0,0,3 - drug possession (PCS),Unknown,Possession of cannabis,,,,,,100,1000,D,PT Monitoring,PT
-2022-03-06,35,Kelly McCarthy,Public,latino,0,0,0,3 - drug possession (PCS),Unknown,Possession of cannabis,,,,,,0,10000,I,,
-2022-02-07,10,Mary C. Marubio,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",2,Possession with intent to distribute,,,,,VOBB,0,10000,I,PT Supervision,PT
-2022-02-21,27,?,Public,,0,0,0,9 - other,4,Reckless discharge,,Misd - simple assault,Misd - resisting peace officer,,,,,,,
-2022-02-23,5,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",1,Residential burglary,,,,,,0,5000,D,,
-2022-01-17,10,Charles S. Beach II,Public,,0,0,1,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",4,Retail theft,,Warrant,,,,0,,I,EM,EM
-2022-01-31,11,Kelly McCarthy,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Retail theft,,,,,,ns,1000,D,,
-2022-02-23,4,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Retail theft,,,,,,,10000,I,,
-2022-01-17,7,Charles S. Beach II,Public,,0,0,0,8 - robbery,2,Robbery,,,,,VOBB,0,40000,D,EM,EM
-2022-01-20,6,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Robbery,,# - Attempted Vehicular Hijacking,,,,0,140000,D,EM House arrest,EM
-2022-01-31,16,Kelly McCarthy,Public,,0,0,0,8 - other crimes against a person,Unknown,Stabbing,,,,,,"2,000",200000,D,EM Unspecified,EM
-2022-02-21,18,?,Public,,0,0,0,8 - other crimes against a person,Unknown,Strangulation,,1 - att criminal sexual assault,,,,100,50000,D,,
-2022-01-20,7,Charles S. Beach II,,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Theft,,,,,VOBB,500,5000,D,EM House arrest,EM
-2022-01-20,2,Charles S. Beach II,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Theft,,2 - theft,,,,2000,20000,D,EM Unspecified,EM
-2022-04-21,1,Charles S. Beach II,Private,Latino,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Theft,,,,,,,10000,I,None,
-2022-01-15,19,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",4,Theft,Misd,Tresspass to real property,,,VOBB,,2000,D,,
-2022-02-02,22,Mary C. Marubio,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Theft,,,,,,0,10000,I,,
-2022-02-20,30,Maryam Ahmad,Public,,0,1,1,"1 - traffic, non-DUI",Unknown,Traffic offense,,Warrant,,,Nole,,,,,
-2022-02-20,16,Maryam Ahmad,Public,,0,0,0,9 - other,2,Unlawful possession of ammunition by a felon,,# - failure to surrender FOID,,,,20,,I,EM House arrest,EM
-2022-03-06,3,Kelly McCarthy,Private,black,1,0,0,9 - other,Unknown,Unlawful sale of a weapon,,,,FOID and CCL,,1000,10000,D,,
-2022-01-15,24,Maryam Ahmad,Public,,1,0,1,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Warrant,,No FOID or CCL,VOBB,500-1000,100000,D,EM,EM
-2022-01-17,8,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,Misd,Resisting arrest,Misd - Resisting Arrest ,Convicted of a felony,IDOC Hold,300,20000,D,EM,EM
-2022-01-19,8,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Resisting a peace officer,,No FOID or CCL,No background,200,5000,D,EM curfew,EM
-2022-01-19,29,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,2 - UUW by a Felon,,Convicted of a felony,VOP,,10000,D,EM curfew,EM
-2022-01-20,11,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,FOID no CCL,No background,500,20000,D,EM curfew,EM
-2022-01-20,12,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,Misd - Driving with a suspended license,,Convicted of a felony,,500,10000,D,EM curfew,EM
-2022-01-20,18,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,No FOID or CCL,,300,5000,D,EM curfew,EM
-2022-02-02,7,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,VOP,2000,20000,D,EM curfew,EM
-2022-02-07,3,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - Driving on a suspended license,,Convicted of a felony,VOBB,100,10000,D,EM curfew,EM
-2022-02-07,20,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - Driving on a sus or revoked,,No FOID or CCL,VOBB,800,30000,D,EM curfew,EM
-2022-03-06,23,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,,5000,D,EM curfew,EM
-2022-03-06,33,Kelly McCarthy,Public,latino,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,VOBB,,40000,D,EM curfew,EM
-2022-01-19,9,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,Misd. - battery,Misd. - battery,Convicted of a felony,,500,5000,D,EM House arrest,EM
-2022-01-19,13,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,2 - UUW by a Felon,2 - UUW by a Felon,Convicted of a felony,IDOC Hold,300,200000,D,EM House arrest,EM
-2022-01-20,4,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - AUUW,,No FOID or CCL,,500,5000,D,EM House arrest,EM
-2022-02-20,3,Maryam Ahmad,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,Misd - Reckless driving,F - Failure to properly restrain a child,,,1000,320000,D,EM Unspecified,EM
-2022-02-21,23,?,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,500,50000,D,EM Unspecified,EM
-2022-02-21,26,?,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,No FOID or CCL,,500,30000,D,EM Unspecified,EM
-2022-03-06,6,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,,30000,D,EM Unspecified,EM
-2022-03-06,18,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,No FOID or CCL,,250,40000,D,EM Unspecified,EM
-2022-03-06,22,Kelly McCarthy,Public,white or latino (surname),1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - Reckless discharge,,No FOID or CCL,,ns,30000,D,EM Unspecified,EM
-2022-03-06,25,Kelly McCarthy,Public,latino,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,VOBB,100,20000,D,EM Unspecified,EM
-2022-03-06,26,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,X - AHC,,Convicted of a felony,,,40000,D,EM Unspecified,EM
-2022-03-06,27,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,,0,50000,D,EM Unspecified,EM
-2022-01-19,18,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,200,500,D,No conditions,
-2022-01-15,23,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,100,2000,D,PT monitoring,PT
-2022-01-20,10,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,Out of state,,"1,000",10000,D,PT Monitoring,PT
-2022-01-26,6,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,ns,20000,D,PT Monitoring,PT
-2022-02-14,2,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - PCann,,FOID no CCL,,0,,I,PT Monitoring,PT
-2022-02-20,2,Maryam Ahmad,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Resisting a peace officer,,No FOID or CCL,No background,500,5000,D,PT Monitoring,PT
-2022-02-21,12,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,100,10000,I,PT Monitoring,PT
-2022-03-06,1,Kelly McCarthy,Private,latino,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,No FOID or CCL,,1000,10000,D,PT Monitoring,PT
-2022-01-15,8,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,,10000,I,PT Supervision,PT
-2022-01-15,26,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,300,10000,I,PT Supervision,PT
-2022-01-17,15,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Possession of cannabis,,No FOID or CCL,,300,3000,D,PT Supervision,PT
-2022-01-17,16,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,Misd. - Driving on Revoked License,,Convicted of a felony,,0,15000,D,PT Supervision,PT
-2022-01-19,24,Charles S. Beach II,Public,,0,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,500,5000,D,PT Supervision,PT
-2022-01-27,3,Kelly McCarthy,Private,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,IDOC Hold,"2,000",20000,D,PT Supervision,PT
-2022-01-27,8,Kelly McCarthy,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,0,20000,D,PT Supervision,PT
-2022-02-02,16,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,300,3000,D,PT Supervision,PT
-2022-02-07,4,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,# - Speeding,,Convicted of a felony,,1000,10000,D,PT Supervision,PT
-2022-02-07,25,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,Convicted of a felony,,ns,5000,D,PT Supervision,PT
-2022-02-10,11,Barbara L. Dawkins,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,ns,5000,D,PT Supervision,PT
-2022-02-14,7,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,200,2000,D,PT Supervision,PT
-2022-02-20,25,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,100,1000,D,PT Supervision,PT
-2022-02-21,1,?,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,1000,,I,PT Supervision,PT
-2022-02-23,2,?,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,,10000,I,PT Supervision,PT
-2022-02-23,3,?,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,,,No FOID or CCL,,,10000,D,PT Supervision,PT
-2022-02-23,12,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,100,10000,I,PT Supervision,PT
-2022-02-23,13,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,500,75000,D,PT Supervision,PT
-2022-03-06,28,Kelly McCarthy,Public,white or latino (surname),1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - PCS,,No FOID or CCL,,ri,5000,D,PT Supervision,PT
-2022-01-19,2,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd. - assault,,FOID no CCL,No background,,,I,PT Supervision curfew,PT
-2022-01-15,13,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,300,10000,I,,
-2022-01-15,22,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,10000,I,,
-2022-01-17,3,Charles S. Beach II,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,10000,I,,
-2022-01-17,4,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,,,I,,
-2022-01-17,9,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,4,Driving with a suspended or revoked license,,FOID no CCL,No background,,,I,,
-2022-01-17,17,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,,I,,
-2022-01-17,18,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,,I,,
-2022-01-17,19,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,,I,,
-2022-01-17,23,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,,5000,D,,
-2022-01-19,10,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,2 - UUW by a Felon,Muni - High capacity magazine,Convicted of a felony,IDOC Hold,500,,No bond,,
-2022-01-19,14,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,,I,,
-2022-01-19,20,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,200,1000,D,,
-2022-01-19,26,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - PCS,Misd - Possession of cannabis,No FOID or CCL,No background,300,5000,D,,
-2022-01-19,27,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,X - Reckless discharge of a weapon,X - Attempted murder,Convicted of a felony,VOBB,,,No bond,,
-2022-01-20,9,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,500,,I,,
-2022-01-26,5,Kelly McCarthy,Private,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,,500,5000,D,,
-2022-01-27,6,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - PSMV,Muni - metal peircing bullets,Convicted of a felony,VOP,200,,No bond,,
-2022-01-27,11,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - Resisting a peace officer,,,,200,2000,D,,
-2022-01-31,5,Kelly McCarthy,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - Poss Cannabis,,FOID and CCL,No background,ri,10000,I,,
-2022-01-31,6,Kelly McCarthy,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Traffic offense,,FOID no CCL,No background,"0, ri",10000,I,,
-2022-01-31,7,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,"0, ri",10000,D,,
-2022-01-31,8,Kelly McCarthy,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,100,10000,I,,
-2022-01-31,9,Kelly McCarthy,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Traffic offenses,,No FOID or CCL,No background,500,,,,
-2022-01-31,12,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - Poss Ammunition,,,,,5000,D,,
-2022-01-31,19,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,Traffic violations,PCann,Convicted of a felony,,300,5000,D,,
-2022-01-31,20,Kelly McCarthy,Private,,1,0,0,6 - gun possession (prior record),2,UUW,,,,Convicted of a felony,,"2,500",,,,
-2022-02-02,1,Mary C. Marubio,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Agg Assault,,No FOID or CCL,,300,3000,D,,
-2022-02-02,2,Mary C. Marubio,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Criminal trespass to vehicle,,,,1500,15000,D,,
-2022-02-02,5,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,# - Obstructed front windshield,,No FOID or CCL,,500,5000,D,,
-2022-02-02,8,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - resisiting arrest,,No FOID or CCL,,0,5000,D,,
-2022-02-02,9,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,0,3000,D,,
-2022-02-02,12,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Possession of cannabis,Misd - Driving on a suspended license,,,0,1500,D,,
-2022-02-02,15,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - no seatbelt,# - no registration,FOID no CCL,,0,,,,
-2022-02-02,19,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,0,10000,I,,
-2022-02-07,1,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,100,10000,I,,
-2022-02-07,2,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,3 - Poss of a revoked FOID,,No FOID or CCL,No background,ri,10000,I,,
-2022-02-07,7,Mary C. Marubio,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,,,Convicted of a felony,VOBB,500,150000,D,,
-2022-02-07,11,Mary C. Marubio,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,# - Failure to keep in lanes,,Convicted of a felony,,500,5000,D,,
-2022-02-07,17,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,ns,10000,I,,
-2022-02-07,18,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Resisting,,FOID no CCL,No background,ns,10000,I,,
-2022-02-07,19,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,ns,10000,I,,
-2022-02-07,21,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,2000,5000,D,,
-2022-02-07,22,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,500,5000,D,,
-2022-02-07,23,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,500,5000,D,,
-2022-02-07,26,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,500,5000,D,,
-2022-02-07,30,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,0,5000,D,,
-2022-02-07,32,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,200,2000,D,,
-2022-02-07,33,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Muni - Possession of an extended magazine,,No FOID or CCL,No background,ns,3000,D,,
-2022-02-07,34,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - PCann,,No FOID or CCL,,500,5000,D,,
-2022-02-10,5,Barbara L. Dawkins,Public,,0,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - PCann,,No FOID or CCL,,0,5000,D,,
-2022-02-10,9,Barbara L. Dawkins,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,VOBB,500,5000,D,,
-2022-02-10,10,Barbara L. Dawkins,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,FOID no CCL,,500,10000,I,,
-2022-02-10,12,Barbara L. Dawkins,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - PCann,,Convicted of a felony,,300,5000,D,,
-2022-02-14,1,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,0,,I,,
-2022-02-14,10,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,300,3000,D,,
-2022-02-14,11,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,VOBB,ns,300000,D,,
-2022-02-14,13,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,100,1000,D,,
-2022-02-20,10,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,,,I,,
-2022-02-20,13,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,,,I,,
-2022-02-20,18,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,1 - PCS Crack,,Convicted of a felony,,0,5000,D,,
-2022-02-20,20,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,1200,5000,D,,
-2022-02-20,27,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Possession of cannabis,Muni - High capacity magazine,FOID no CCL,No background,0,5000,D,,
-2022-02-20,29,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,,,,,
-2022-02-20,34,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,,,,,
-2022-02-21,8,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - PCS,,No FOID or CCL,,,10000,D,,
-2022-02-21,15,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,,,,,
-2022-02-21,16,?,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,Misd - Possession of cannabis,# - Driving,,,,,,,
-2022-02-23,10,?,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,,,Convicted of a felony,,200,2000,D,,
-2022-02-23,17,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - AUUW,,FOID no CCL,,,,,,
-2022-02-23,19,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,VOBB,,,,,
-2022-02-23,20,?,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,,,,,
-2022-03-06,9,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,No FOID or CCL,,500,10000,D,,
-2022-03-06,12,Kelly McCarthy,Public,black,1,0,1,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Warrant,,No FOID or CCL,VOBB,ns,2000,D,,
-2022-03-06,15,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,ns,7500,D,,
-2022-03-06,16,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,200,5000,D,,
-2022-03-06,21,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,IDOC Hold,ns,30000,D,,
-2022-03-06,32,Kelly McCarthy,Public,latino,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - PCS,,No FOID or CCL,,600,10000,D,,
-2022-03-06,34,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,200,2000,D,,
-2022-03-06,38,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,,,20000,D,,
-2022-04-21,3,Charles S. Beach II,Private,Black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,500,5000,D,,
-2022-04-21,5,Charles S. Beach II,Private,Black,1,0,0,6 - gun possession (prior record),2,UUW,,,,No FOID or CCL,,500,5000,D,,
-2022-04-21,16,Charles S. Beach II,Private,Black ,1,0,0,6 - gun possession (prior record),3,UUW,,3 - MD Cannabis,,,VOBB,0,75000,D,,
-2022-04-21,17,Charles S. Beach II,Private,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,,,,,,
-2022-01-15,2,Maryam Ahmad,Private,,1,0,0,6 - gun possession (prior record),3,UUW,4,PCS,Muni - High capacity magazine,Convicted of a felony,VOP,,500000,D,EM,EM
-2022-01-15,4,Maryam Ahmad,Private,,1,0,0,6 - gun possession (prior record),2,UUW,Misd,Unlawful entry to a vehicle,,,IDOC Hold,,150000,D,EM,EM
-2022-01-15,14,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,,300,100000,D,EM,EM
-2022-01-15,28,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),2,UUW,4,Fleeing and attempting to allude,,Convicted of a felony,VOBB,300,500000,D,EM,EM
-2022-01-15,29,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,4,PCS,1 - Unlawful Possession of Ectasy,Convicted of a felony,VOBB,1000,100000,D,EM,EM
-2022-01-15,31,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,,,Convicted of a felony,,0,6000,D,EM curfew,EM
-2022-01-15,16,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,Misd,Possession of cannabis,,Convicted of a felony,,300,3000,D,PT Monitoring,PT
-2022-01-15,30,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,,800,90000,D,PT Monitoring,PT
-2022-01-17,2,Charles S. Beach II,Private,,1,0,0,6 - gun possession (prior record),3,UUW,4,PCS,,No FOID or CCL,,500,5000,D,PT Supervision,PT
-2022-01-15,20,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,Muni,Weapon on the CTA,,,,1500,5000,D,,
-2022-02-21,14,?,Public,,0,0,0,9 - other,2,Violation of sex offenders registery act,,,,,,0,10000,I,EM Unspecified,EM
-2022-01-15,9,Maryam Ahmad,No mitigation,,0,0,1,,,Warrant,,,,,,,,,,
-2022-01-15,10,Maryam Ahmad,No mitigation,,0,0,1,,,Warrant,,,,,,,,,,
-2022-01-15,11,Maryam Ahmad,No mitigation,,0,0,1,,,Warrant,,,,,,,,,,
-2022-01-17,6,Charles S. Beach II,No mitigation,,0,0,1,,,Warrant,,,,,,,,,,
-2022-01-31,14,Kelly McCarthy,Public,,0,0,1,,,Warrant,,,,,,,,No bond,,
-2022-02-20,7,Maryam Ahmad,Public,,0,0,1,,,Warrant,,,,,,,,No bond,,
-2022-02-20,26,Maryam Ahmad,Public,,0,0,1,,,Warrant,,Warrant,,,,,,No bond,,
-2022-02-20,35,Maryam Ahmad,Public,,0,0,1,,,Warrant,,,,,,,,No bond,,
-2022-02-21,6,?,No mitigation,,0,0,1,,,Warrant,,,,,,,,No bond,,
-2022-02-21,7,?,No mitigation,,0,0,1,,,Warrant,,Warrant,Warrant,,,,"10,000 + 15,000 + 3000",D,,
-2022-02-21,9,?,Private,,0,0,1,,,Warrant,,,,,VOBB,,5000,D,,
-2022-02-21,19,?,Public,,0,0,1,,,Warrant,,,,,,,,No bond,,
-2022-02-21,25,?,Public,,0,0,1,,,Warrant,,,,,,,,,,
-2022-03-06,30,Kelly McCarthy,Public,latino,0,0,1,,,Warrant,,,,,,,,,,
-2022-01-15,7,Maryam Ahmad,No mitigation,,0,0,1,,,Warrant ,,,,,,,,,,
-2022-03-06,7,Kelly McCarthy,Public,black,0,0,1,,,Warrant - PCS,,,,,,,,,,
-2022-03-06,8,Kelly McCarthy,Public,black,0,0,1,,,Warrant - PCS,,,,,,,,,,
-2022-01-19,12,Charles S. Beach II,Public,,0,0,0,,,,,,,,VOBB,100,,I,EM House arrest,EM
-2022-01-26,1,Kelly McCarthy,Public,,0,0,0,,,,,,,Convicted of a felony,VOBB,ns,400000,C,EM House arrest,EM
-2022-01-19,5,Charles S. Beach II,Public,,0,0,0,,,,,,,,,500,40000,D,PT Supervision,PT
-2022-01-19,11,Charles S. Beach II,Public,,0,0,0,,,,,,,,,0,,I,PT Supervision,PT
-2022-01-17,5,Charles S. Beach II,No mitigation,,0,1,0,,,,,,,,Nole,,,,,
-2022-01-17,20,Charles S. Beach II,No mitigation,,0,1,0,,,,,,,,Nole,,,,,
-2022-01-17,21,Charles S. Beach II,No mitigation,,0,1,0,,,,,,,,Nole,,,,,
-2022-02-10,4,Barbara L. Dawkins,No mitigation,,0,1,0,,,,,,,,Nole,,,,,
-2022-02-10,6,Barbara L. Dawkins,No mitigation,,0,1,0,,,,,,,,Nole,,,,,
-2022-02-10,7,Barbara L. Dawkins,,,0,0,0,,,,,,,,,ns,20000,D,,
+date,case,judge,atty_type,app_race,gun_case,nole,warrant,charge_type,class_1,charge_1,class_2,charge_2,charge_3,gun_license,violations,can_post,bond_amount,bond_type,condition_notes,condition,note,psa
+2022-01-15,25,Maryam Ahmad,Public,,0,0,0,10 - other crimes against a person,X,Armed Violence,4,PCS,3 - M&D Cannabis,FOID and CCL,No background,200,100000,D,EM,EM,,
+2022-02-14,6,Maryam Ahmad,Public,,0,0,0,"10 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Home invasion,,# - Agg battery with a deadly weapon,,,,,,No bond,,,,
+2022-02-07,9,Mary C. Marubio,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",X,Manufacture and delivery heroin,,,,,,ns,10000,I,,,,
+2022-02-20,6,Maryam Ahmad,Public,,0,1,0,"4 - drug sales (manufacture/delivery, PCS with intent)",X,Manufacture and delivery heroin,,4 - PCS Heroin,4 - PCS Heroin,,Nole,,,,,,,
+2022-01-17,11,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,Misd,Driving without a license,,Convicted of a felony,IDOC Hold,1500,50000,D,EM curfew,EM,,
+2022-01-10,15,,,,1,0,0,6 - gun possession (prior record),X,AHC,3,UUW,Misd - domestic battery,Convicted of a felony,,,,No bond,EM House arrest,EM,,
+2022-01-12,4,Charles S. Beach II,Private,,1,0,0,6 - gun possession (prior record),X,AHC,X,Armed Violence,4 - PCS,Convicted of a felony,IDOC Hold,2500,,No bond,,,,
+2022-01-12,13,Charles S. Beach II,APD,,1,0,0,6 - gun possession (prior record),X,AHC,,,,,IDOC Hold,,,No bond,,,,
+2022-01-19,15,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,Misd - Resisting a peace officer,,Convicted of a felony,IDOC Hold,500,,No bond,,,,
+2022-01-26,3,Kelly McCarthy,Private,,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,VOP,2000,,No bond,,,,
+2022-02-02,18,Mary C. Marubio,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,# - Possession of ammunition,# - Resisting,Convicted of a felony,IDOC Hold,1000,,No bond,,,,
+2022-02-10,1,Barbara L. Dawkins,Private,,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,VOBB,,,No bond,,,,
+2022-01-15,1,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,VOBB,,3000000,D,,,,
+2022-01-17,27,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,,400,60000,D,EM,EM,,
+2022-01-19,6,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,2,UUW by a felon,,Convicted of a felony,IDOC Hold,1000,100000,D,EM House arrest,EM,,
+2022-01-19,16,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),X,AHC,,2 - UUW by a Felon,Misd. - Driving in a sus license,Convicted of a felony,None,1000,10000,D,EM curfew,EM,,
+2022-02-02,6,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),X,AHC,,,,,IDOC Hold,2500,25000,D,EM Unspecified,EM,,
+2022-03-06,31,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),X,AHC,,,,Convicted of a felony,,0,75000,D,EM Unspecified,EM,,
+2022-03-06,37,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),X,AHC,,# - PCann 30 - 100 g,,Convicted of a felony,,,,,,,,
+2022-01-19,19,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Home invasion,,Misd. - Domestic battery,,,,,,No bond,,,,
+2022-01-15,18,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Aggrevated vehicular hijacking,,,,,No background,0,750000,D,,,,
+2022-02-21,2,?,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Armed robbery,,,,,VOBB,,150000,D,,,,
+2022-02-21,3,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Armed robbery,,,,,VOBB,5000,100000,D,EM Unspecified,EM,,
+2022-01-10,6,,,,0,0,0,8 - other crimes against a person,X,Aggrevated vehicular hijacking,X,Aggrevated kidnapping,X - Aggrevated Vehicular Hijacking,,,1000,,No bond,,,,
+2022-03-06,19,Kelly McCarthy,Public,black,0,0,0,8 - other crimes against a person,X,1st degree murder,,# - Armed robbery,,,,0,,No bond,,,,
+2022-01-10,7,,,,0,0,0,8 - other crimes against a person,X,Aggrevate domestic battery,2,Domestic violence involving stragulation,,,,500,10000,D,EM House arrest,EM,,
+2022-02-20,36,Maryam Ahmad,Public,,0,0,0,8 - other crimes against a person,X,Attempt 1st degree murder,,2 - Agg domestic battery,,,,1000,200000,D,,,,
+2022-02-02,3,Mary C. Marubio,Private,,0,0,0,"8 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Home invasion,,,,,,500,5000,D,,,,
+2022-01-15,5,Maryam Ahmad,Private,,0,0,0,9 - murder,X,1st degree murder,Unknown,UUW,,No FOID or CCL,,,,No bond,,,,
+2022-02-20,5,Maryam Ahmad,Private,,0,0,0,9 - other,X,Armed Violence,,4 - Agg assault of a PO (x4),4 - PCS Heroin,,IDOC Hold,ns,3000,D,EM Unspecified,EM,,
+2022-02-23,18,?,Public,,0,0,0,9 - other,X,Armed Violence,,2 - UUW by a Felon,Warrant,Convicted of a felony,,500,150000,D,EM Unspecified,EM,,
+2022-02-20,4,Maryam Ahmad,Private,,0,0,1,9 - other,X,Aggrevated discharge using a silencer,,Warrant,,,No background,,,,,,,
+2022-02-02,4,Mary C. Marubio,Private,,0,0,0,"9 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",X,Home invasion,,Misd - Assault,,,,500,5000,D,PT Supervision,PT,,
+2022-04-21,2,Charles S. Beach II,Private,Black,0,1,0,"1 - traffic, non-DUI",Unknown,Driving with a suspended or revoked license,,,,,,,10000,I,6p - 6a curfew no device,EM,,
+2022-04-21,11,Charles S. Beach II,Private,Latino,0,0,0,"1 - traffic, non-DUI",Unknown,Driving with a suspended or revoked license,,,,,,,10000,I,PT Monitoring,PT,,
+2022-02-20,30,Maryam Ahmad,Public,,0,1,1,"1 - traffic, non-DUI",Unknown,Traffic offense,,Warrant,,,Nole,,,,,,,
+2022-04-21,4,Charles S. Beach II,Private,Latina,0,0,0,"2 - traffic, DUI",Unknown,DUI,,Misd - driving under the influence of alcohol,,,,,10000,I,PT Supervision,PT,,
+2022-01-10,9,,,,0,0,0,"2 - traffic, DUI",Unknown,Aggravated DUI,,,,,,300,3000,D,PT Supervision,PT,,
+2022-01-17,26,Charles S. Beach II,Public,,0,0,1,"2 - traffic, DUI",Unknown,Aggravated DUI,,Warrant,# - Aggravated DUI,,,300,10000,D,EM,EM,,
+2022-02-20,28,Maryam Ahmad,Public,,0,0,0,"2 - traffic, DUI",Unknown,DUI,,,,,,300,3000,D,,,,
+2022-01-10,8,,,,0,0,0,3 - drug possession (PCS),Unknown,PCS Cannabis,,,,,,100,10000,I,,,,
+2022-01-19,23,Charles S. Beach II,No mitigation,,0,0,1,3 - drug possession (PCS),Unknown,PCS,,Warrant,Warrant,,,,,I,,,,
+2022-01-19,25,Charles S. Beach II,No mitigation,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,,,I,,,,
+2022-01-20,14,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,VOBB,,,I,EM curfew,EM,,
+2022-01-20,15,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,,,I,EM curfew,EM,,
+2022-01-20,16,Charles S. Beach II,No mitigation,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,,,I,,,,
+2022-01-20,17,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,# - PCS,,,VOBB,,,I,PT Supervision - curfew,PT,,
+2022-01-26,2,Kelly McCarthy,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,VOBB,ri,25000,I,,,,
+2022-01-27,5,Kelly McCarthy,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,ri,10000,I,,,,
+2022-01-31,18,Kelly McCarthy,No mitigation,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,,10000,I,,,,
+2022-02-10,8,Barbara L. Dawkins,,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,ns,,I,,,,
+2022-03-06,35,Kelly McCarthy,Public,latino,0,0,0,3 - drug possession (PCS),Unknown,Possession of cannabis,,,,,,0,10000,I,,,,
+2022-05-15,8,,APD,Latina,0,0,0,3 - drug possession (PCS),Unknown,PCS,Misd,Resisting a peace officer,,,,,10000,I,,,,
+2022-01-27,7,Kelly McCarthy,Public,,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,200,2000,D,PT Supervision,PT,,
+2022-01-27,9,Kelly McCarthy,Public,,0,0,0,3 - drug possession (PCS),Unknown,Possession of cannabis,,,,,,100,1000,D,PT Monitoring,PT,,
+2022-03-06,2,Kelly McCarthy,Private,black,0,0,1,3 - drug possession (PCS),Unknown,PCS Heroin,,# - M&D Heroin,Warrant,,,,10000,D,PT Monitoring,PT,,
+2022-03-06,10,Kelly McCarthy,Public,black,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,0,5000,D,,,,
+2022-03-06,13,Kelly McCarthy,Public,white,0,0,0,3 - drug possession (PCS),Unknown,PCS,,,,,,0,5000,D,,,,
+2022-03-06,17,Kelly McCarthy,Public,black,0,0,0,3 - drug possession (PCS),Unknown,PCS,,Misd reckless conduct,,,VOP,50,2000,D,,,,
+2022-01-27,10,Kelly McCarthy,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,# Drug paraphanalia,,,Nole,,,,,,,
+2022-01-31,15,Kelly McCarthy,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,,,,Nole,,,,,,,
+2022-01-31,21,Kelly McCarthy,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,,,,Nole,,,,,,,
+2022-02-02,10,Mary C. Marubio,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,,,,Nole,,,,,,,
+2022-02-07,6,Mary C. Marubio,No mitigation,,0,1,0,3 - drug possession (PCS),Unknown,PCS,,# - PCS,,,Nole,,,,,,,
+2022-01-27,12,Kelly McCarthy,,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery of cannabis,,,,,,ri,,I,,,,
+2022-01-31,3,Kelly McCarthy,No mitigation,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery,,,,,,,10000,I,,,,
+2022-01-31,4,Kelly McCarthy,Private,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery of cannabis,,,,,VOP,ns,10000,I,PT Monitoring,PT,,
+2022-01-20,13,Charles S. Beach II,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery of cannabis,,,,,VOBB,,10000,D,,,,
+2022-01-27,13,Kelly McCarthy,,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery heroin,,,,,,0,10000,D,PT Monitoring,PT,,
+2022-01-27,14,Kelly McCarthy,,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery heroin,,,,,,0,25000,D,PT Monitoring,PT,,
+2022-02-10,3,Barbara L. Dawkins,Private,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",Unknown,Manufacture and delivery of a look alike substance,,# - Possession,,,,3000,5000,D,,,,
+2022-01-27,6,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - PSMV,Muni - metal peircing bullets,Convicted of a felony,VOP,200,,No bond,,,,
+2022-02-10,10,Barbara L. Dawkins,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,FOID no CCL,,500,10000,I,,,,
+2022-01-15,16,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,Misd,Possession of cannabis,,Convicted of a felony,,300,3000,D,PT Monitoring,PT,,
+2022-01-15,20,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,Muni,Weapon on the CTA,,,,1500,5000,D,,,,
+2022-01-26,5,Kelly McCarthy,Private,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,,500,5000,D,,,,
+2022-01-26,6,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,ns,20000,D,PT Monitoring,PT,,
+2022-01-27,3,Kelly McCarthy,Private,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,IDOC Hold,"2,000",20000,D,PT Supervision,PT,,
+2022-01-27,11,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - Resisting a peace officer,,,,200,2000,D,,,,
+2022-01-31,7,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,"0, ri",10000,D,,,,
+2022-01-31,12,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - Poss Ammunition,,,,,5000,D,,,,
+2022-02-07,3,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - Driving on a suspended license,,Convicted of a felony,VOBB,100,10000,D,EM curfew,EM,,
+2022-02-10,11,Barbara L. Dawkins,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,ns,5000,D,PT Supervision,PT,,
+2022-02-10,12,Barbara L. Dawkins,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - PCann,,Convicted of a felony,,300,5000,D,,,,
+2022-02-21,23,?,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,500,50000,D,EM Unspecified,EM,,
+2022-02-21,26,?,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,No FOID or CCL,,500,30000,D,EM Unspecified,EM,,
+2022-03-06,1,Kelly McCarthy,Private,latino,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,No FOID or CCL,,1000,10000,D,PT Monitoring,PT,,
+2022-03-06,9,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,No FOID or CCL,,500,10000,D,,,,
+2022-03-06,18,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,No FOID or CCL,,250,40000,D,EM Unspecified,EM,,
+2022-03-06,21,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,IDOC Hold,ns,30000,D,,,,
+2022-03-06,22,Kelly McCarthy,Public,white or latino (surname),1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - Reckless discharge,,No FOID or CCL,,ns,30000,D,EM Unspecified,EM,,
+2022-03-06,26,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,X - AHC,,Convicted of a felony,,,40000,D,EM Unspecified,EM,,
+2022-03-06,27,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,,0,50000,D,EM Unspecified,EM,,
+2022-03-06,28,Kelly McCarthy,Public,white or latino (surname),1,0,0,6 - gun possession (prior record),Unknown,UUW,,# - PCS,,No FOID or CCL,,ri,5000,D,PT Supervision,PT,,
+2022-03-06,38,Kelly McCarthy,Public,black,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,,,20000,D,,,,
+2022-02-23,20,?,Public,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,Convicted of a felony,,,,,,,,
+2022-04-21,17,Charles S. Beach II,Private,,1,0,0,6 - gun possession (prior record),Unknown,UUW,,,,,,,,,,,,
+2022-01-10,5,,,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Unlawful entry to a vehicle,,,,,,ns,10000,I,,,,
+2022-01-19,21,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Possession of a stolen motor vehicle,,,,,No background,0,,I,,,,
+2022-01-31,17,Kelly McCarthy,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Burglary,,,,,,ri,10000,I,EM House arrest,EM,,
+2022-02-23,4,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Retail theft,,,,,,,10000,I,,,,
+2022-01-10,13,,,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Aggrevated possession of a stolen motor vehicle,,,,,VOP,0,50000,D,EM Unspecified,EM,,
+2022-01-12,6,Charles S. Beach II,APD,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Robbery,,,,,,0,10000,D,EM House arrest,EM,,
+2022-01-12,7,Charles S. Beach II,APD,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Robbery,Unknown,Attempt vehicular hijacking,,,,,100000,D,,,,
+2022-01-26,4,Kelly McCarthy,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Possession of a stolen motor vehicle,,,,,,100,1000,D,EM curfew,EM,,
+2022-01-27,4,Kelly McCarthy,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Possession of a stolen motor vehicle,,,,,VOBB,ns,30000,D,,,,
+2022-01-31,11,Kelly McCarthy,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Retail theft,,,,,,ns,1000,D,,,,
+2022-01-31,13,Kelly McCarthy,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Burglary,,# - Crim tresspass,# - Obstructing identification,,,,3000,D,,,,
+2022-02-20,8,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Identity theft,,,,,,ri,2000,D,,,,
+2022-03-06,20,Kelly McCarthy,Public,black,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Burglary,,# - Armed robbery,,,,0,7500,D,EM Unspecified,EM,,
+2022-03-06,29,Kelly McCarthy,Public,black,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Possession of a stolen motor vehicle,,# - Fleeing a police officer,,,,,10000,D,,,,
+2022-03-06,36,Kelly McCarthy,Public,latino,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,Burglary,,# - Theft,,,,0,60000,D,,,,
+2022-04-21,18,Charles S. Beach II,Private,Latino,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",Unknown,"Damage to government property between 500 and 10,000",,,,,,,5000,D,,,,
+2022-02-20,17,Maryam Ahmad,Public,,0,0,0,8 - other crimes against a person,Unknown,Murder,,,,,,8000,,No bond,,,,
+2022-01-31,1,Kelly McCarthy,Private,,0,0,0,8 - other crimes against a person,Unknown,Battery,,# - Theft,,,,ri,10000,I,,,,
+2022-01-31,2,Kelly McCarthy,No mitigation,,0,0,0,8 - other crimes against a person,Unknown,Aggrevated battery,,,,,,,10000,I,,,,
+2022-01-31,10,Kelly McCarthy,Public,,0,0,0,8 - other crimes against a person,Unknown,Aggrevated battery,,,,,,0,10000,D,,,,
+2022-01-31,16,Kelly McCarthy,Public,,0,0,0,8 - other crimes against a person,Unknown,Stabbing,,,,,,"2,000",200000,D,EM Unspecified,EM,,
+2022-02-14,12,Maryam Ahmad,Private,,0,0,1,8 - other crimes against a person,Unknown,Domestic violence,,Warrant,,,,ri,2000,D,EM Unspecified,EM,,
+2022-02-21,17,?,Public,,0,0,0,8 - other crimes against a person,Unknown,Aggrevated battery of a peace officer,,# - Agg damage to prop,# - crim trespass to land,,,,30000,D,,,,
+2022-02-21,18,?,Public,,0,0,0,8 - other crimes against a person,Unknown,Strangulation,,1 - att criminal sexual assault,,,,100,50000,D,,,,
+2022-03-06,4,Kelly McCarthy,Public,black,0,0,0,8 - other crimes against a person,Unknown,Murder,,,,,,,1000000,C,,,,
+2022-03-06,5,Kelly McCarthy,Public,black,0,0,0,8 - other crimes against a person,Unknown,Attempt 1st degree murder of a peace officer,,,,,,,1000000,C,,,,
+2022-01-27,1,Kelly McCarthy,Public,,0,0,0,8 - other crimes against a person,Unknown,Extortion / threatening for protection money,,,,,,,,,,,,
+2022-01-27,2,Kelly McCarthy,,,0,0,0,8 - other crimes against a person,Unknown,Attempt murder,,,,,,,,,,,,
+2022-01-15,6,Maryam Ahmad,Public,,0,0,0,8 - robbery,Unknown,Armed robbery,,,,,,,250000,D,,,,
+2022-02-10,2,Barbara L. Dawkins,Private,,0,0,0,9 - other,Unknown,Official misconduct,,,,,,500,75000,D,,,,
+2022-03-06,3,Kelly McCarthy,Private,black,1,0,0,9 - other,Unknown,Unlawful sale of a weapon,,,,FOID and CCL,,1000,10000,D,,,,
+2022-03-06,11,Kelly McCarthy,Public,black,0,0,1,9 - other,Unknown,Escape (EM violation),,Warrant,# - Assault peace officer ,,,ns,40000,D,,,,
+2022-03-06,14,Kelly McCarthy,Public,black,0,0,1,9 - other,Unknown,Failure to register,,Warrant,,,,1000,10000,D,,,,
+2022-03-06,24,Kelly McCarthy,Public,latino,0,1,0,9 - other,Unknown,Drinking on the public way,,,,,Nole,,,,,,,
+2022-01-20,19,Charles S. Beach II,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,,,,,,,I,,,,
+2022-02-21,13,?,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,4 - AUUW,Muni - Possession of metal piercing bullets,FOID no CCL,,0,10000,I,,,,
+2022-02-23,14,?,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,,,,,0,10000,I,EM Unspecified,EM,,
+2022-02-02,17,Mary C. Marubio,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,,,,,100,1000,D,,,,
+2022-02-02,21,Mary C. Marubio,Public,,0,0,0,"1 - traffic, non-DUI",4,Driving with a suspended or revoked license,,,,,,0,1500,D,,,,
+2022-01-15,17,Maryam Ahmad,Public,,0,0,0,11 - other,4,Fleeing and attempting to allude,2,Possession of a stolen motor vehicle,,,,100,250000,D,EM,EM,,
+2022-01-20,3,Charles S. Beach II,Private,,0,0,0,"2 - traffic, DUI",4,Aggravated DUI,,,,,,500,,I,PT Monitoring,PT,,
+2022-01-20,5,Charles S. Beach II,No mitigation,,0,0,0,"2 - traffic, DUI",4,Aggravated DUI,,Misd. - DUI,Misd - Driving on a suspended or revoked license,,,,,I,,,,
+2022-02-07,5,Mary C. Marubio,Public,,0,0,0,"2 - traffic, DUI",4,DUI,,# - Knowingly having a fake license,,,,ns,10000,I,,,,
+2022-01-12,1,Charles S. Beach II,,,0,0,0,"2 - traffic, DUI",4,Driving with a suspended or revoked license,Misd,Aggravated DUI,,,,200,25000,D,PT Supervision,PT,,
+2022-05-15,4,,APD,Latino,0,0,0,"2 - traffic, DUI",4,DUI,Misd,DUI,,,,500,8000,D,EM Unspecified,SCAB,,3-2
+2022-01-17,22,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,4 - PCS,,,No background,,,I,,,,
+2022-01-19,4,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,No background,,,I,,,,
+2022-01-19,17,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,Misd. - Drug para,,,IDOC Hold,0,,I,EM Unspecified,EM,,
+2022-01-20,8,Charles S. Beach II,No mitigation,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,,,I,,,,
+2022-02-02,13,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,ns,10000,I,PT Supervision,PT,,
+2022-02-07,12,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,200,10000,I,PT Supervision,PT,,
+2022-02-07,14,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,VOBB,ns,10000,I,,,,
+2022-02-07,15,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,100,10000,I,PT Supervision,PT,,
+2022-02-07,27,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,ns,10000,I,PT Supervision,PT,,
+2022-02-07,28,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,Misd - Possession of drug paraphanalia,,,,ns,10000,I,PT Supervision,PT,,
+2022-02-07,31,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,ri,10000,I,PT Supervision,PT,,
+2022-02-07,35,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,ns,10000,I,,,,
+2022-02-20,19,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,,I,EM Unspecified,EM,,
+2022-02-21,5,?,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,IDOC Hold,,,I,,,,
+2022-02-21,10,?,Public,,0,0,1,3 - drug possession (PCS),4,PCS,,4 - drug paraphanalia,Warrant (DV),,,0,10000,I,EM Unspecified,EM,,
+2022-02-21,22,?,Public,,0,0,1,3 - drug possession (PCS),4,PCS,,Warrant,,,,0,10000,I,EM Unspecified,EM,,
+2022-02-21,28,?,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,10000,I,,,,
+2022-02-23,6,?,,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,,,10000,I,PT Supervision,PT,,
+2022-04-21,10,Charles S. Beach II,Private,Black,0,0,1,3 - drug possession (PCS),4,PCS,,,,,,,10000,I,PT Supervision,PT,,
+2022-04-21,13,Charles S. Beach II,Private,Black,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,10000,I,PT Supervision,PT,,
+2022-04-21,15,Charles S. Beach II,Private,Black,0,0,0,3 - drug possession (PCS),4,PCS,,4 - PCS,,,,,10000,I,PT Supervision,PT,,
+2022-05-15,2,,Private,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,10000,I,PT Supervision,,No mitigation,
+2022-05-15,5,,APD,Latino,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,10000,I,PT Supervision,,No mitigation,4-3
+2022-01-10,14,,,,0,0,0,3 - drug possession (PCS),4,PCS,Misd,Resisting a peace officer,Misd - Resisting a peace officer,,,0,10000,D,EM Unspecified,EM,,
+2022-01-12,17,Charles S. Beach II,APD,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,VOBB,,5000,D,EM curfew,EM,,
+2022-01-15,12,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,3,Manufacture and delivery of cannabis,,,,0,5000,D,EM curfew,EM,,
+2022-01-17,29,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),4,PCS,Misd,DUI,Misd. - Leaving the scene of an accident,,,,5000,D,,,,
+2022-02-02,20,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,A - Domestic battery,,,IDOC Hold,0,5000,D,EM House arrest,EM,,
+2022-02-07,8,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,60,600,D,,,,
+2022-02-07,13,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,A - DUI,A - DV,,,300,5000,D,PT Supervision,PT,,
+2022-02-07,16,Mary C. Marubio,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,IDOC Hold,ns,900,D,,,,
+2022-02-14,5,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS Heroin,,4 - PCrack,,,VOBB,0,3000,D,EM curfew,EM,,
+2022-02-14,9,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,Misd - Retail theft,Misd - Retail theft,,,0,3000,D,PT Supervision,PT,,
+2022-02-20,1,Maryam Ahmad,Public,,0,0,1,3 - drug possession (PCS),4,PCS,,Warrant,,,VOP,ri,1000,D,,,,
+2022-02-20,33,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,4 - Unlawful PCS,4 - Unlawful PCS,,,500,1500,D,,,,
+2022-02-23,8,?,Public,,0,0,0,3 - drug possession (PCS),4,PCS Cannabis,,,,,IDOC Hold,200,2000,D,PT Supervision,PT,,
+2022-05-15,12,,APD,Black,0,0,0,3 - drug possession (PCS),4,PCS,,,,,VOBB,100,2000,D,EM Unspecified,,,6-4-NVCA
+2022-02-07,29,Mary C. Marubio,No mitigation,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,,,
+2022-02-14,3,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,,,
+2022-02-20,11,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,,,
+2022-02-20,12,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,,,,,,
+2022-02-20,14,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),4,PCS,,,,,,,,,,,,
+2022-02-20,15,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,,,
+2022-02-20,22,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,,,
+2022-02-20,31,Maryam Ahmad,Public,,0,1,0,3 - drug possession (PCS),4,PCS,,,,,Nole,,,,,,,
+2022-05-15,7,,APD,Black,0,1,1,3 - drug possession (PCS),4,PCS,,,,,,,,,,,,
+2022-01-19,28,Charles S. Beach II,No mitigation,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",4,Manufacture and delivery of cannabis,,Misd. - Tresspass to property,,,,,,I,,,,
+2022-04-21,8,Charles S. Beach II,Private,Black,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",4,Manufacture and delivery of cannabis,,,,,,,10000,I,,,,
+2022-02-20,21,Maryam Ahmad,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",4,Manufacture and delivery of cannabis,,,,,,ri,1000,D,,,,
+2022-01-15,21,Maryam Ahmad,No mitigation,,0,1,0,"4 - drug sales (manufacture/delivery, PCS with intent)",4,Manufacture and delivery of cannabis,Muni,Soliciting,,,Nole,,,,,,,
+2022-01-10,2,,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,0,10000,I,PT Supervision,PT,,
+2022-01-10,3,,,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,Misd,Possession of ammunition,,No FOID or CCL,,300,10000,I,EM House arrest,EM,,
+2022-01-10,10,,,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,0,10000,I,PT Supervision,PT,,
+2022-01-15,8,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,,10000,I,PT Supervision,PT,,
+2022-01-15,13,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,300,10000,I,,,,
+2022-01-15,22,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,10000,I,,,,
+2022-01-15,26,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,300,10000,I,PT Supervision,PT,,
+2022-01-17,3,Charles S. Beach II,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,10000,I,,,,
+2022-01-17,4,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,,,I,,,,
+2022-01-17,9,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,4,Driving with a suspended or revoked license,,FOID no CCL,No background,,,I,,,,
+2022-01-17,17,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,,I,,,,
+2022-01-17,18,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,,I,,,,
+2022-01-17,19,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,,I,,,,
+2022-01-19,2,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd. - assault,,FOID no CCL,No background,,,I,PT Supervision curfew,PT,,
+2022-01-19,14,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,,,I,,,,
+2022-01-20,9,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,500,,I,,,,
+2022-01-31,5,Kelly McCarthy,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - Poss Cannabis,,FOID and CCL,No background,ri,10000,I,,,,
+2022-01-31,6,Kelly McCarthy,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Traffic offense,,FOID no CCL,No background,"0, ri",10000,I,,,,
+2022-01-31,8,Kelly McCarthy,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,100,10000,I,,,,
+2022-02-02,19,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,0,10000,I,,,,
+2022-02-07,1,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,100,10000,I,,,,
+2022-02-07,2,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,3 - Poss of a revoked FOID,,No FOID or CCL,No background,ri,10000,I,,,,
+2022-02-07,17,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,ns,10000,I,,,,
+2022-02-07,18,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Resisting,,FOID no CCL,No background,ns,10000,I,,,,
+2022-02-07,19,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,ns,10000,I,,,,
+2022-02-14,1,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,0,,I,,,,
+2022-02-14,2,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - PCann,,FOID no CCL,,0,,I,PT Monitoring,PT,,
+2022-02-20,10,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,,,I,,,,
+2022-02-20,13,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,,,I,,,,
+2022-02-21,1,?,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,No background,1000,,I,PT Supervision,PT,,
+2022-02-21,12,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,100,10000,I,PT Monitoring,PT,,
+2022-02-23,2,?,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,,10000,I,PT Supervision,PT,,
+2022-02-23,12,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,100,10000,I,PT Supervision,PT,,
+2022-01-10,1,,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,300,5000,D,PT Supervision,PT,,
+2022-01-10,4,,,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,Misd,Resisting a peace officer,,No FOID or CCL,,500,2000,D,EM House arrest,EM,,
+2022-01-12,2,Charles S. Beach II,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,4,Aggrevated vehicule or concealed weapon,Misd - Resisting a peace officer,No FOID or CCL,IDOC Hold,500,75000,D,PT Supervision,PT,,
+2022-01-15,23,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,100,2000,D,PT monitoring,PT,,
+2022-01-15,24,Maryam Ahmad,Public,,1,0,1,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Warrant,,No FOID or CCL,VOBB,500-1000,100000,D,EM,EM,,
+2022-01-17,15,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Possession of cannabis,,No FOID or CCL,,300,3000,D,PT Supervision,PT,,
+2022-01-17,23,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,,5000,D,,,,
+2022-01-19,8,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Resisting a peace officer,,No FOID or CCL,No background,200,5000,D,EM curfew,EM,,
+2022-01-19,18,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,200,500,D,No conditions,,,
+2022-01-19,20,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,200,1000,D,,,,
+2022-01-19,24,Charles S. Beach II,Public,,0,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,500,5000,D,PT Supervision,PT,,
+2022-01-19,26,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - PCS,Misd - Possession of cannabis,No FOID or CCL,No background,300,5000,D,,,,
+2022-01-20,4,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - AUUW,,No FOID or CCL,,500,5000,D,EM House arrest,EM,,
+2022-01-20,10,Charles S. Beach II,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,Out of state,,"1,000",10000,D,PT Monitoring,PT,,
+2022-01-27,8,Kelly McCarthy,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,0,20000,D,PT Supervision,PT,,
+2022-02-02,1,Mary C. Marubio,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Agg Assault,,No FOID or CCL,,300,3000,D,,,,
+2022-02-02,2,Mary C. Marubio,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Criminal trespass to vehicle,,,,1500,15000,D,,,,
+2022-02-02,8,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - resisiting arrest,,No FOID or CCL,,0,5000,D,,,,
+2022-02-02,9,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,0,3000,D,,,,
+2022-02-02,12,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Possession of cannabis,Misd - Driving on a suspended license,,,0,1500,D,,,,
+2022-02-02,16,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,300,3000,D,PT Supervision,PT,,
+2022-02-07,20,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - Driving on a sus or revoked,,No FOID or CCL,VOBB,800,30000,D,EM curfew,EM,,
+2022-02-07,21,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,2000,5000,D,,,,
+2022-02-07,22,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,500,5000,D,,,,
+2022-02-07,23,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,500,5000,D,,,,
+2022-02-07,25,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,Convicted of a felony,,ns,5000,D,PT Supervision,PT,,
+2022-02-07,26,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,500,5000,D,,,,
+2022-02-07,30,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,0,5000,D,,,,
+2022-02-07,32,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,200,2000,D,,,,
+2022-02-07,33,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Muni - Possession of an extended magazine,,No FOID or CCL,No background,ns,3000,D,,,,
+2022-02-07,34,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - PCann,,No FOID or CCL,,500,5000,D,,,,
+2022-02-10,5,Barbara L. Dawkins,Public,,0,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - PCann,,No FOID or CCL,,0,5000,D,,,,
+2022-02-10,9,Barbara L. Dawkins,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,VOBB,500,5000,D,,,,
+2022-02-14,7,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,200,2000,D,PT Supervision,PT,,
+2022-02-14,10,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,300,3000,D,,,,
+2022-02-14,13,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,100,1000,D,,,,
+2022-02-20,2,Maryam Ahmad,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Resisting a peace officer,,No FOID or CCL,No background,500,5000,D,PT Monitoring,PT,,
+2022-02-20,20,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,1200,5000,D,,,,
+2022-02-20,25,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,No background,100,1000,D,PT Supervision,PT,,
+2022-02-20,27,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Misd - Possession of cannabis,Muni - High capacity magazine,FOID no CCL,No background,0,5000,D,,,,
+2022-02-21,8,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - PCS,,No FOID or CCL,,,10000,D,,,,
+2022-02-23,13,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,500,75000,D,PT Supervision,PT,,
+2022-03-06,6,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,,30000,D,EM Unspecified,EM,,
+2022-03-06,12,Kelly McCarthy,Public,black,1,0,1,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Warrant,,No FOID or CCL,VOBB,ns,2000,D,,,,
+2022-03-06,15,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,ns,7500,D,,,,
+2022-03-06,16,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,200,5000,D,,,,
+2022-03-06,23,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,,5000,D,EM curfew,EM,,
+2022-03-06,25,Kelly McCarthy,Public,latino,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,VOBB,100,20000,D,EM Unspecified,EM,,
+2022-03-06,32,Kelly McCarthy,Public,latino,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - PCS,,No FOID or CCL,,600,10000,D,,,,
+2022-03-06,33,Kelly McCarthy,Public,latino,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,VOBB,,40000,D,EM curfew,EM,,
+2022-03-06,34,Kelly McCarthy,Public,black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,FOID no CCL,,200,2000,D,,,,
+2022-04-21,3,Charles S. Beach II,Private,Black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,500,5000,D,,,,
+2022-05-15,1,,Private,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,4,PCS,,,,,100000,D,EM Unspecified,,,
+2022-05-15,13,,APD,Latino,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,4,Reckless discharge,,,,200,5000,D,EM Unspecified,,,1-2
+2022-05-15,18,,APD,White,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,,250,2500,D,,,,2-1
+2022-05-15,26,,APD,Latino,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,Muni,Possession of a laser sight,,,,250,2500,D,EM Unspecified,,,2-1
+2022-05-15,30,,APD,Black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,Misd,Illegal transport of cannabis,,,,100,5000,D,PT Supervision,,,2-1
+2022-05-15,31,,APD,Black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,Misd,Illegal transport of cannabis,,,VOBB,,20000,D,EM Unspecified,,,4-4
+2022-05-15,32,,APD,Black,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,Misd,Driving with a suspended or revoked license,,,VOBB,,20000,D,EM Unspecified,,,
+2022-01-31,9,Kelly McCarthy,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,Traffic offenses,,No FOID or CCL,No background,500,,,,,,
+2022-02-02,15,Mary C. Marubio,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,# - no seatbelt,# - no registration,FOID no CCL,,0,,,,,,
+2022-02-20,29,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,,,,,,,
+2022-02-20,34,Maryam Ahmad,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,,,,,,,
+2022-02-21,15,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,,,,,,,,,
+2022-02-23,17,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,4 - AUUW,,FOID no CCL,,,,,,,,
+2022-02-23,19,?,Public,,1,0,0,"5 - gun possession (first time, AUUW class 4)",4,UUW,,,,No FOID or CCL,VOBB,,,,,,,
+2022-01-12,14,Charles S. Beach II,APD,,1,0,0,6 - gun possession (prior record),4,UUW,,,,No FOID or CCL,,500,10000,D,,,,
+2022-01-10,12,,,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",4,Retail theft,,,,,,0,10000,I,EM curfew,EM,,
+2022-01-12,9,Charles S. Beach II,APD,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",4,Retail theft,,,,,,,10000,I,,,,
+2022-01-17,10,Charles S. Beach II,Public,,0,0,1,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",4,Retail theft,,Warrant,,,,0,,I,EM,EM,,
+2022-01-15,19,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",4,Theft,Misd,Tresspass to real property,,,VOBB,,2000,D,,,,
+2022-02-23,9,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",4,Criminal damage to property,,,,,,0,5000,D,,,,
+2022-01-12,3,Charles S. Beach II,APD,,1,0,0,9 - other,4,Aggrevated fleeing and alluding,Misd,Resisting a peace officer,Misd - Resisting a peace officer,,,0,100000,D,PT Supervision,PT,,
+2022-02-21,27,?,Public,,0,0,0,9 - other,4,Reckless discharge,,Misd - simple assault,Misd - resisting peace officer,,,,,,,,,
+2022-01-12,8,Charles S. Beach II,APD,,0,0,1,3 - drug possession (PCS),3,PCS,4,PCS Cannabis,,,,500,25000,D,EM House arrest,EM,,
+2022-01-19,7,Charles S. Beach II,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",3,Manufacture and delivery of cannabis,,,,,,,,I,,,,
+2022-01-15,27,Maryam Ahmad,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",3,Manufacture and delivery of cannabis,4,PCS,,,VOBB,0,10000,D,,,,
+2022-02-20,32,Maryam Ahmad,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",3,Manufacture and delivery of cannabis,,Misd - Driving on a suspended license,,,,200,10000,D,PT Monitoring,PT,,
+2022-01-17,14,Charles S. Beach II,Public,,0,0,0,"5 - gun possession (first time, AUUW class 4)",3,Possession of a revoked FOID card,4,UUW,,No FOID or CCL,,,5000,D,PT Supervision,PT,,
+2022-01-10,11,,,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,,0,150000,D,EM House arrest,EM,,
+2022-01-12,15,Charles S. Beach II,APD,,1,0,1,6 - gun possession (prior record),3,UUW,,,,,VOBB,500,150000,D,PT Supervision,PT,,
+2022-01-15,2,Maryam Ahmad,Private,,1,0,0,6 - gun possession (prior record),3,UUW,4,PCS,Muni - High capacity magazine,Convicted of a felony,VOP,,500000,D,EM,EM,,
+2022-01-15,14,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,,300,100000,D,EM,EM,,
+2022-01-15,29,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,4,PCS,1 - Unlawful Possession of Ectasy,Convicted of a felony,VOBB,1000,100000,D,EM,EM,,
+2022-01-15,30,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,,800,90000,D,PT Monitoring,PT,,
+2022-01-17,2,Charles S. Beach II,Private,,1,0,0,6 - gun possession (prior record),3,UUW,4,PCS,,No FOID or CCL,,500,5000,D,PT Supervision,PT,,
+2022-01-17,8,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,Misd,Resisting arrest,Misd - Resisting Arrest ,Convicted of a felony,IDOC Hold,300,20000,D,EM,EM,,
+2022-01-17,13,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,Possession of a firearm with a defaced serial number,4,UUW,2 - P Stolen Firearm,No FOID or CCL,No background,300,5000,D,,,,
+2022-01-17,16,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,Misd. - Driving on Revoked License,,Convicted of a felony,,0,15000,D,PT Supervision,PT,,
+2022-01-19,9,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,Misd. - battery,Misd. - battery,Convicted of a felony,,500,5000,D,EM House arrest,EM,,
+2022-01-20,11,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,FOID no CCL,No background,500,20000,D,EM curfew,EM,,
+2022-01-20,18,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,No FOID or CCL,,300,5000,D,EM curfew,EM,,
+2022-02-02,5,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,# - Obstructed front windshield,,No FOID or CCL,,500,5000,D,,,,
+2022-02-02,7,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,VOP,2000,20000,D,EM curfew,EM,,
+2022-02-07,4,Mary C. Marubio,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,# - Speeding,,Convicted of a felony,,1000,10000,D,PT Supervision,PT,,
+2022-02-07,11,Mary C. Marubio,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,# - Failure to keep in lanes,,Convicted of a felony,,500,5000,D,,,,
+2022-02-14,11,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,,,Convicted of a felony,VOBB,ns,300000,D,,,,
+2022-02-20,3,Maryam Ahmad,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,Misd - Reckless driving,F - Failure to properly restrain a child,,,1000,320000,D,EM Unspecified,EM,,
+2022-02-20,18,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,1 - PCS Crack,,Convicted of a felony,,0,5000,D,,,,
+2022-02-23,3,?,Private,,1,0,0,6 - gun possession (prior record),3,UUW,,,,No FOID or CCL,,,10000,D,PT Supervision,PT,,
+2022-04-21,16,Charles S. Beach II,Private,Black ,1,0,0,6 - gun possession (prior record),3,UUW,,3 - MD Cannabis,,,VOBB,0,75000,D,,,,
+2022-05-15,6,,APD,Black,1,0,0,6 - gun possession (prior record),3,UUW,,,,No FOID or CCL,,,5000,D,,,UUW with revoked FOID,2-2
+2022-05-15,10,,APD,Black,1,0,0,6 - gun possession (prior record),3,UUW,,,,No FOID or CCL,,,10000,D,EM Unspecified,,,
+2022-05-15,14,,APD,Latino,1,0,0,6 - gun possession (prior record),3,UUW by a felon,4,PCS,,,,500,5000,D,PT Supervision,,,3-3
+2022-05-15,16,,APD,Black,1,0,0,6 - gun possession (prior record),3,UUW by a felon,,,,,,500,30000,D,EM Unspecified,,,3-3
+2022-05-15,19,,APD,Latino,1,0,0,6 - gun possession (prior record),3,UUW,,,,No FOID or CCL,,500,5000,D,PT Monitoring,,,2-3
+2022-05-15,21,,APD,Black,1,0,0,6 - gun possession (prior record),3,UUW by a felon,Misd,Resisting a peace officer,,,,500,7000,D,EM Unspecified,,,3-2
+2022-05-15,25,,APD,Black,1,0,1,6 - gun possession (prior record),3,UUW by a felon,,,,,,0,25000,D,EM Unspecified,,,4-2
+2022-05-15,28,,APD,Black,1,0,0,6 - gun possession (prior record),3,UUW by a felon,2,Possession of a stolen firearm,,,IDOC Hold,0,80000,D,EM Unspecified,,,5-4
+2022-05-15,29,,APD,Black,1,0,0,6 - gun possession (prior record),3,UUW with defaced serial number,,,,,,0,90000,D,EM Unspecified,,Prior record not noted (3 bc of serial number),
+2022-02-21,16,?,Public,,1,0,0,6 - gun possession (prior record),3,UUW,,Misd - Possession of cannabis,# - Driving,,,,,,,,,
+2022-01-12,11,Charles S. Beach II,APD,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Identity theft,3,Identity theft,4 - Unlawful posseession of a credit card,,,,10000,I,,,,
+2022-01-12,12,Charles S. Beach II,APD,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Retail theft,,,,,,,10000,I,,,,
+2022-02-02,22,Mary C. Marubio,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Theft,,,,,,0,10000,I,,,,
+2022-04-21,1,Charles S. Beach II,Private,Latino,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Theft,,,,,,,10000,I,None,,,
+2022-01-15,3,Maryam Ahmad,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Identity theft,,,,,VOBB,1000,1000,D,PT Monitoring,PT,,
+2022-01-20,7,Charles S. Beach II,,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Theft,,,,,VOBB,500,5000,D,EM House arrest,EM,,
+2022-02-23,16,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",3,Forgery,,,,,,0,3000,D,,,,
+2022-02-20,9,Maryam Ahmad,Public,,0,0,0,8 - other crimes against a person,3,Aggrevateed battery great bodily harm,,,,,,200,2000,D,,,,
+2022-05-15,11,,APD,Black,0,0,0,8 - other crimes against a person,3,Aggrevateed battery great bodily harm,,,,,,100,2000,D,EM Unspecified,,,3-2
+2022-02-23,1,?,Private,,0,0,0,8 - other crimes against a person,3,Aggrevated battery,,,,,,,,,,,,
+2022-01-19,3,Charles S. Beach II,Private,,0,0,0,9 - other,3,Fleeing and attempting to allude,,Misd. - Driving with sus license,Misd. - driving revoked registration,,No background,,15000,D,PT Supervision,PT,,
+2022-01-17,25,Charles S. Beach II,Public,,0,0,0,10 - other crimes against a person,2,Aggrevated battery of a peace officer,,Misd. - Domestic Battery,Misd. - Battery,,,,30000,D,EM,EM,,
+2022-01-17,12,Charles S. Beach II,Public,,0,0,0,3 - drug possession (PCS),2,PCS,4,PCS,,,,0,,I,PT Supervision,PT,,
+2022-04-21,9,Charles S. Beach II,Private,Black,0,0,0,3 - drug possession (PCS),2,Possession of a schedule 1 or 2 narcotic,,,,,,,10000,I,PT Supervision,PT,,
+2022-04-21,12,Charles S. Beach II,Private,Black,0,0,0,3 - drug possession (PCS),2,Possession of a schedule 1 or 2 narcotic,,4 - MD Cannabis,,,,,10000,I,PT Supervision,PT,,
+2022-02-20,24,Maryam Ahmad,Public,,0,0,0,3 - drug possession (PCS),2,Possession of a schedule 1 or 2 narcotic,,,,,,100,1000,D,,,,
+2022-01-19,30,Charles S. Beach II,No mitigation,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",2,Manufacture and delivery of cannabis,,,,,,,,I,PT Supervision,PT,,
+2022-02-02,14,Mary C. Marubio,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",2,Delivery of a controlled substance,,,,,,ns,10000,I,PT Supervision,PT,,
+2022-02-07,10,Mary C. Marubio,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",2,Possession with intent to distribute,,,,,VOBB,0,10000,I,PT Supervision,PT,,
+2022-04-21,14,Charles S. Beach II,Private,Black,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",2,Manufacture and delivery of cannabis,,Misd - Crim tresspass to prop,,,,,10000,I,EM curfew,EM,,
+2022-01-19,10,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,2 - UUW by a Felon,Muni - High capacity magazine,Convicted of a felony,IDOC Hold,500,,No bond,,,,
+2022-01-19,27,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,X - Reckless discharge of a weapon,X - Attempted murder,Convicted of a felony,VOBB,,,No bond,,,,
+2022-01-15,4,Maryam Ahmad,Private,,1,0,0,6 - gun possession (prior record),2,UUW,Misd,Unlawful entry to a vehicle,,,IDOC Hold,,150000,D,EM,EM,,
+2022-01-15,28,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),2,UUW,4,Fleeing and attempting to allude,,Convicted of a felony,VOBB,300,500000,D,EM,EM,,
+2022-01-15,31,Maryam Ahmad,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,,,Convicted of a felony,,0,6000,D,EM curfew,EM,,
+2022-01-19,13,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,2 - UUW by a Felon,2 - UUW by a Felon,Convicted of a felony,IDOC Hold,300,200000,D,EM House arrest,EM,,
+2022-01-19,29,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,2 - UUW by a Felon,,Convicted of a felony,VOP,,10000,D,EM curfew,EM,,
+2022-01-20,12,Charles S. Beach II,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,Misd - Driving with a suspended license,,Convicted of a felony,,500,10000,D,EM curfew,EM,,
+2022-01-31,19,Kelly McCarthy,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,Traffic violations,PCann,Convicted of a felony,,300,5000,D,,,,
+2022-02-07,7,Mary C. Marubio,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,,,Convicted of a felony,VOBB,500,150000,D,,,,
+2022-02-23,10,?,Public,,1,0,0,6 - gun possession (prior record),2,UUW,,,,Convicted of a felony,,200,2000,D,,,,
+2022-04-21,5,Charles S. Beach II,Private,Black,1,0,0,6 - gun possession (prior record),2,UUW,,,,No FOID or CCL,,500,5000,D,,,,
+2022-05-15,27,,APD,Latino,1,0,0,6 - gun possession (prior record),2,UUW by a felon,Misd,Driving with a suspended or revoked license,,,,,55000,D,EM Unspecified,,,
+2022-01-31,20,Kelly McCarthy,Private,,1,0,0,6 - gun possession (prior record),2,UUW,,,,Convicted of a felony,,"2,500",,,,,,
+2022-01-17,24,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,Misd. - Criminal damage to property,,,,0,,I,EM,EM,,
+2022-01-19,1,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,2 - burg,2 - burg,,,0,,I,EM House arrest,EM,,
+2022-02-23,15,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,,,,,0,10000,I,EM Unspecified,EM,,
+2022-01-20,2,Charles S. Beach II,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Theft,,2 - theft,,,,2000,20000,D,EM Unspecified,EM,,
+2022-01-20,6,Charles S. Beach II,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Robbery,,# - Attempted Vehicular Hijacking,,,,0,140000,D,EM House arrest,EM,,
+2022-02-07,24,Mary C. Marubio,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Attempt vehicular hijacking,,2 - Attempt vehicular theft,,,,0,100000,D,,,,
+2022-02-20,37,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Possession of a stolen motor vehicle,,4 - PCS,,,,100,1000,D,PT Supervision,PT,,
+2022-02-21,4,?,Private,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Possession of a stolen motor vehicle,,2 - Agg fleeing and alluding,# - Speeding,,VOBB,1000,100000,D,EM Unspecified,EM,,
+2022-02-23,7,?,Public,,0,0,1,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,# - Damage to property,Warrant,,,0,10000,D,PT Supervision,PT,,
+2022-02-02,11,Mary C. Marubio,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Burglary,,,,,,0,,,EM House arrest,EM,,
+2022-02-14,8,Maryam Ahmad,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",2,Possession of a stolen motor vehicle,,,,,,,,,,,,
+2022-02-21,20,?,Public,,0,0,0,8 - other crimes against a person,2,Aggrevated battery of a peace officer,,,,,,0,10000,I,EM curfew,EM,,
+2022-02-14,4,Maryam Ahmad,Public,,0,0,0,8 - other crimes against a person,2,Aggrevated battery of a peace officer,,2 - Agg Battery to a Peace Officer,2 - Agg Battery to a Peace Officer,,No background,0,3000,D,,,,
+2022-05-15,22,,APD,Black,0,0,0,8 - other crimes against a person,2,Aggrevated battery of a peace officer,Misd,Domestic violence,Misd - Resisting a peace officer,,,0,7000,D,EM Unspecified,,,3-?
+2022-05-15,23,,APD,White,0,0,0,8 - other crimes against a person,2,Aggrevated battery of a peace officer,2,Aggrevated battery of a peace officer,Misd - Resisting a peace officer,,,,70000,D,EM Unspecified,,,4-2
+2022-05-15,24,,APD,Black,0,0,0,8 - other crimes against a person,2,Robbery,3,Aggrevated battery to a transit employee,,,,,150000,D,EM Unspecified,,,2-1
+2022-01-17,7,Charles S. Beach II,Public,,0,0,0,8 - robbery,2,Robbery,,,,,VOBB,0,40000,D,EM,EM,,
+2022-02-20,16,Maryam Ahmad,Public,,0,0,0,9 - other,2,Unlawful possession of ammunition by a felon,,# - failure to surrender FOID,,,,20,,I,EM House arrest,EM,,
+2022-02-21,14,?,Public,,0,0,0,9 - other,2,Violation of sex offenders registery act,,,,,,0,10000,I,EM Unspecified,EM,,
+2022-05-15,20,,APD,White,0,0,0,9 - other,2,Unlawful possession of child pornography,3,Unlawful possession of child pornography,,,,750,7500,D,,,,1-1
+2022-01-15,15,Maryam Ahmad,Public,,0,0,0,10 - other crimes against a person,1,Aggrevateed assault great bodily harm,1,Aggrevateed assault great bodily harm,Misd - Resisting a peace officer,,,0,100000,D,,,,
+2022-01-19,22,Charles S. Beach II,No mitigation,,0,0,0,3 - drug possession (PCS),1,PCS,,4 - PCS,,,,,,I,,,,
+2022-01-20,1,Charles S. Beach II,Private,,0,0,0,3 - drug possession (PCS),1,PCS,,4 - AUUW,4 - AUUW,FOID no CCL,No background,3000,10000,D,"PT Supervision, curfew",PT,,
+2022-02-23,11,?,Public,,0,0,0,3 - drug possession (PCS),1,PCS Heroin,,,,,,,,,,,,
+2022-01-17,28,Charles S. Beach II,Public,,0,0,1,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery of heroin,4,PCS,Warrant,,,,10000,I,,,,
+2022-02-21,11,?,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery of cocaine,,,,,,,10000,I,,,,
+2022-02-21,24,?,Public,,0,0,1,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery,,1 - M&D CS,Warrant,,,0,10000,I,EM Unspecified,EM,,
+2022-04-21,7,Charles S. Beach II,Private,Black,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery heroin,,1 - MD Cocaine,4 - MD Cannabis,,,250,10000,I,PT Monitoring,PT,,
+2022-02-02,23,Mary C. Marubio,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery of cocaine,,3 - M&D Cannabis,,,VOBB,200,2000,D,,,,
+2022-02-21,21,?,Public,,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery,,4 - PCS,,,VOBB,0,10000,D,,,,
+2022-02-20,23,Maryam Ahmad,Public,,0,1,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery heroin,,,,,Nole,,,,,,,
+2022-04-21,6,Charles S. Beach II,Private,Latino,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",1,Manufacture and delivery of cocaine,,Misd - Unlawful PCann while driver of vehicle,,,,300,,,,,,
+2022-01-12,16,Charles S. Beach II,APD,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",1,Ongoing financial criminal enterprise,3,Retail theft,,,,0,100000,D,PT Supervision,PT,,
+2022-02-23,5,?,Public,,0,0,0,"7 - property crimes (e.g. burglary, possession of a stolen motor vehicle)",1,Residential burglary,,,,,,0,5000,D,,,,
+2022-01-17,1,Charles S. Beach II,Private,,0,0,0,"1 - traffic, non-DUI",,Driving on sus or rev license,Misd,Domestic battery,Misd - Unlawful entry to a vehicle,,VOBB,500,10000,D,EM,EM,,
+2022-01-12,10,Charles S. Beach II,APD,,0,0,0,"2 - traffic, DUI",,,,,,,,500,5000,D,PT Supervision,PT,,
+2022-01-12,5,Charles S. Beach II,,,0,1,0,3 - drug possession (PCS),,,,,,,,,,,,,,
+2022-05-15,17,,APD,Blark-Latino,0,0,0,"4 - drug sales (manufacture/delivery, PCS with intent)",,Possession with intent to distribute,,,,,,,10000,I,,,,
+2022-05-15,3,,Private,,0,0,1,9 - other,,,,,,,,,,,,,4 warrants,
+2022-01-31,14,Kelly McCarthy,Public,,0,0,1,,,Warrant,,,,,,,,No bond,,,,
+2022-02-20,7,Maryam Ahmad,Public,,0,0,1,,,Warrant,,,,,,,,No bond,,,,
+2022-02-20,26,Maryam Ahmad,Public,,0,0,1,,,Warrant,,Warrant,,,,,,No bond,,,,
+2022-02-20,35,Maryam Ahmad,Public,,0,0,1,,,Warrant,,,,,,,,No bond,,,,
+2022-02-21,6,?,No mitigation,,0,0,1,,,Warrant,,,,,,,,No bond,,,,
+2022-02-21,19,?,Public,,0,0,1,,,Warrant,,,,,,,,No bond,,,,
+2022-01-19,11,Charles S. Beach II,Public,,0,0,0,,,,,,,,,0,,I,PT Supervision,PT,,
+2022-01-19,12,Charles S. Beach II,Public,,0,0,0,,,,,,,,VOBB,100,,I,EM House arrest,EM,,
+2022-01-19,5,Charles S. Beach II,Public,,0,0,0,,,,,,,,,500,40000,D,PT Supervision,PT,,
+2022-02-10,7,Barbara L. Dawkins,,,0,0,0,,,,,,,,,ns,20000,D,,,,
+2022-02-21,7,?,No mitigation,,0,0,1,,,Warrant,,Warrant,Warrant,,,,"10,000 + 15,000 + 3000",D,,,,
+2022-02-21,9,?,Private,,0,0,1,,,Warrant,,,,,VOBB,,5000,D,,,,
+2022-01-26,1,Kelly McCarthy,Public,,0,0,0,,,,,,,Convicted of a felony,VOBB,ns,400000,C,EM House arrest,EM,,
+2022-01-12,18,Charles S. Beach II,,,,,,,,,,,,,,,,,,,,
+2022-01-15,7,Maryam Ahmad,No mitigation,,0,0,1,,,Warrant ,,,,,,,,,,,,
+2022-01-15,9,Maryam Ahmad,No mitigation,,0,0,1,,,Warrant,,,,,,,,,,,,
+2022-01-15,10,Maryam Ahmad,No mitigation,,0,0,1,,,Warrant,,,,,,,,,,,,
+2022-01-15,11,Maryam Ahmad,No mitigation,,0,0,1,,,Warrant,,,,,,,,,,,,
+2022-01-17,5,Charles S. Beach II,No mitigation,,0,1,0,,,,,,,,Nole,,,,,,,
+2022-01-17,6,Charles S. Beach II,No mitigation,,0,0,1,,,Warrant,,,,,,,,,,,,
+2022-01-17,20,Charles S. Beach II,No mitigation,,0,1,0,,,,,,,,Nole,,,,,,,
+2022-01-17,21,Charles S. Beach II,No mitigation,,0,1,0,,,,,,,,Nole,,,,,,,
+2022-02-10,4,Barbara L. Dawkins,No mitigation,,0,1,0,,,,,,,,Nole,,,,,,,
+2022-02-10,6,Barbara L. Dawkins,No mitigation,,0,1,0,,,,,,,,Nole,,,,,,,
+2022-02-21,25,?,Public,,0,0,1,,,Warrant,,,,,,,,,,,,
+2022-03-06,7,Kelly McCarthy,Public,black,0,0,1,,,Warrant - PCS,,,,,,,,,,,,
+2022-03-06,8,Kelly McCarthy,Public,black,0,0,1,,,Warrant - PCS,,,,,,,,,,,,
+2022-03-06,30,Kelly McCarthy,Public,latino,0,0,1,,,Warrant,,,,,,,,,,,,
+2022-05-15,9,,APD,Latina,0,0,1,,,,,,,,,,,,,,,
+2022-05-15,15,,APD,Black,0,0,1,,,,,,,,,,,,,,,
