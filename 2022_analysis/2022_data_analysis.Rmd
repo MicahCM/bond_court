@@ -17,8 +17,17 @@ library(knitr)
 X in .csv remove ASA, atty, and columns after "notes"
 - ^ CHANGE, use original .csv and deselect
 - vector charge_type to be in order
-```{r, setup} 
+- check if I ever use intake data
 
+obs_data notes
+
+sa data notes
+initiation
+
+- Often, in a case, defendants are charged with multiple things. I'm limiting analysis to the most serious charge, represented by binary `PRIMARY_CHARGE_FLAG` variable.
+
+```{r, setup} 
+# dataset 1
 # importing data from my observations (obs_data)
 obs_data <- read.csv("~/Desktop/r/bond_court/data/data_cleaned.csv") %>%
   
@@ -30,34 +39,167 @@ obs_data$can_post <- as.numeric(obs_data$can_post)
 obs_data$bond_amount <- as.numeric(obs_data$bond_amount)
 
 # creating dummy variable for excessive bond
-bond_excess <- data %>%
-  select(date, case, judge, can_post, bond_amount, bond_type, class_1, charge_1, violations, charge_type) %>%
+obs_data <- obs_data %>%
   filter(bond_type == "D") %>%
   drop_na() %>%
-  mutate("bond_excess" = ifelse(((can_post * 10) < bond_amount), 1, 0))
+  mutate("bond_excess" = ifelse(((can_post * 10) < bond_amount), 1, 0)) %>%
+  full_join(obs_data)
 
-#data <- full_join(data, bond_excess)
 
-# CCSAO DATA
+# dataset 2
+# importing data from the Cook County State's Attorney's Office (sa) case initiaion
+sa_init <- read.csv("~/Desktop/r/bond_court/data/2022-07-03 CCSAO Data/Initiation.csv") %>%
+  filter(PRIMARY_CHARGE_FLAG == "true")
 
-initiation <- read.csv("~/Desktop/r/bond_court/data/2022-07-03 CCSAO Data/Initiation.csv")
+# converting "RECEIVED_DATE" into a date variable
+sa_init$RECEIVED_DATE <- mdy_hms(sa_init$RECEIVED_DATE)
 
-initiation_test <- initiation %>%
-  separate(RECEIVED_DATE, c("RECEIVED_DATE", "time"), " ") %>%
-  select(-"time")
+# creating sa_init dataset binned by month
+sa_init_month <- sa_init
 
-test$date <- initiation_test %>%
-  mdy("RECEIVED_DATE")
+sa_init_month$RECEIVED_DATE <- floor_date(sa_init_month$RECEIVED_DATE, "month")
 
-initiation_test$RECEIVED_DATE <- as_date(initiation_test$RECEIVED_DATE) 
+
+# dataset 3
+# importing data from the Cook County State's Attorney's Office (sa) case intake
+sa_intake <- read.csv("~/Desktop/r/bond_court/data/2022-07-03 CCSAO Data/Intake.csv")
+
+# converting "RECEIVED_DATE" into a date variable
+sa_intake$RECEIVED_DATE <- mdy(sa_intake$RECEIVED_DATE)
+```
+
+```{r}
+# IMPORT when using n = 100 obs for coding quickly
+sa_init_full <- read.csv("~/Desktop/r/bond_court/data/2022-07-03 CCSAO Data/Initiation.csv")
+
+# small sample for writing code quickly
+sa_init <- sa_init_full %>%
+  slice_sample(n = 500) %>%
+  filter(PRIMARY_CHARGE_FLAG == "true")
+
+
+# IMPORT when using n = 100 obs for coding quickly
+sa_intake_full <- read.csv("~/Desktop/r/bond_court/data/2022-07-03 CCSAO Data/Intake.csv")
+
+# small sample for writing code quickly
+sa_intake <- sa_intake_full %>%
+  slice_sample(n = 100)
+```
+
+# Case and bond type over time
+Question: In visual look at the n = 100 sample bond was reduced in ANY cases except one that went from no to D
+
+X bin gun-related arrests into one category (only one relevant category)
+
+# Drug and gun cases over time
+```{r}
+sa_init_type <- sa_init %>%
+  filter(OFFENSE_CATEGORY == c("Narcotics", "UUW - Unlawful Use of Weapon")) %>%
+  select(RECEIVED_DATE, OFFENSE_CATEGORY)
+
+sa_init_type$RECEIVED_DATE <- floor_date(sa_init_type$RECEIVED_DATE, "month")
   
-data$date <- as_date(data$date)
+sa_init_type %>%
+  group_by(RECEIVED_DATE, OFFENSE_CATEGORY) %>%
+  summarize(n()) %>%
+  ggplot(
+    mapping = aes(
+      x = RECEIVED_DATE,
+      y = `n()`,
+      color = OFFENSE_CATEGORY
+    )) + 
+  geom_point() +
+  geom_smooth()
+```
+# proportion of class 3, 2, and x UUW cases since 2011
+- IDEA: as % of gun cases
+flag and explore: UNLAWFUL POSSESSION OF A FIREARM BY A STREET GANG MEMBER
+flag how many exist: AGG UUW/VEH/FIR LOADED/NO FOID
 
-?separate
+```{r}
+gun_cases <- sa_init_month %>%
+  filter(OFFENSE_CATEGORY == "UUW - Unlawful Use of Weapon")
 
+# list of gun possession charges 
+# method: top 20 most common highest charge for gun case OFFENSE_CATEGORY limited to gun possession as underlying conduct
+gun_poss <- c(
+  "AGGRAVATED UNLAWFUL USE OF WEAPON", 
+  "UNLAWFUL USE OR POSSESSION OF A WEAPON BY A FELON",
+  "AGG UUW/LOADED/NO FCCA/FOID",
+  "ARMED HABITUAL CRIMINAL",
+  "UNLAWFUL USE OF A WEAPON",
+  "UNLAWFUL POSSESSION OF A FIREARM BY A STREET GANG MEMBER",
+  "POSS FIREARM FOID REVOKED",
+  "AGG UUW/UNLOADED/NO FCCA",
+  "POSSESSION OF STOLEN FIREARM",
+  "AGG UUW/VEH/FIR LOADED/NO FOID",
+  "FIREARM/FOID INVALID/NOT ELIG")
+uuw <- c("AGGRAVATED UNLAWFUL USE OF WEAPON", 
+  "AGG UUW/LOADED/NO FCCA/FOID",
+  "UNLAWFUL USE OF A WEAPON",
+  "POSS FIREARM FOID REVOKED",
+  "AGG UUW/UNLOADED/NO FCCA",
+  "AGG UUW/VEH/FIR LOADED/NO FOID",
+  "FIREARM/FOID INVALID/NOT ELIG")
+uuw_f <- c("UNLAWFUL USE OR POSSESSION OF A WEAPON BY A FELON")
+ahc <- c("ARMED HABITUAL CRIMINAL")
 
+depr_df %>%
+  mutate(Status = case_when(
+    endsWith(ID, "R") ~ "Recovered",
+    endsWith(ID, "S") ~ "Sick"
+    ))
 
-intake <- read.csv("~/Desktop/r/bond_court/data/2022-07-03 CCSAO Data/Intake.csv")
+gun_cases %>%
+  mutate(CHARGE_SUB_CATEGORY = case_when(
+    endsWith(CHARGE_OFFENSE_TITLE, "WEAPON") ~ "UUW"
+  ))
+
+# total cases by charge
+gun_cases %>%
+  group_by(RECEIVED_DATE, CHARGE_OFFENSE_TITLE) %>%
+  # filter(CHARGE_OFFENSE_TITLE %in% gun_poss) %>%
+  filter(`CHARGE_OFFENSE_TITLE` %in% c(
+  "AGGRAVATED UNLAWFUL USE OF WEAPON", 
+  "AGG UUW/LOADED/NO FCCA/FOID",
+  "UNLAWFUL USE OF A WEAPON",
+  "POSS FIREARM FOID REVOKED",
+  "AGG UUW/UNLOADED/NO FCCA",
+  "AGG UUW/VEH/FIR LOADED/NO FOID",
+  "FIREARM/FOID INVALID/NOT ELIG",
+  "UNLAWFUL USE OR POSSESSION OF A WEAPON BY A FELON",
+  "ARMED HABITUAL CRIMINAL")) %>%
+  summarise(n()) %>%
+  ggplot(mapping = aes(
+    x = RECEIVED_DATE,
+    y = `n()`,
+    color = CHARGE_OFFENSE_TITLE
+  )) +
+  geom_point() +
+  geom_smooth() 
+```
+
+Question: bond type for uuw and drug cases
+
+# Drug and gun cases by bond type over time
+```{r}
+sa_init_month <- sa_init
+
+sa_init_month$RECEIVED_DATE <- floor_date(sa_init_month$RECEIVED_DATE, "month")
+
+sa_init_month %>%
+  filter(OFFENSE_CATEGORY == c("Narcotics", "UUW - Unlawful Use of Weapon"))
+  group_by(RECEIVED_DATE, OFFENSE_CATEGORY, BOND_TYPE_CURRENT) %>%
+  summarize(n()) %>%
+  ggplot(
+    mapping = aes(
+      x = RECEIVED_DATE,
+      y = `n()`,
+      color = OFFENSE_CATEGORY
+    )) + 
+  geom_point() +
+  geom_smooth()
+
 
 ```
 
