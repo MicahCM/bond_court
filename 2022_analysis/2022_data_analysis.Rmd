@@ -144,17 +144,6 @@ uuw <- c("AGGRAVATED UNLAWFUL USE OF WEAPON",
 uuw_f <- c("UNLAWFUL USE OR POSSESSION OF A WEAPON BY A FELON")
 ahc <- c("ARMED HABITUAL CRIMINAL")
 
-depr_df %>%
-  mutate(Status = case_when(
-    endsWith(ID, "R") ~ "Recovered",
-    endsWith(ID, "S") ~ "Sick"
-    ))
-
-gun_cases %>%
-  mutate(CHARGE_SUB_CATEGORY = case_when(
-    endsWith(CHARGE_OFFENSE_TITLE, "WEAPON") ~ "UUW"
-  ))
-
 # total cases by charge
 gun_cases %>%
   group_by(RECEIVED_DATE, CHARGE_OFFENSE_TITLE) %>%
@@ -179,28 +168,65 @@ gun_cases %>%
   geom_smooth() 
 ```
 
-Question: bond type for uuw and drug cases
+# Drug case bond over time
+I believe NULL results for bond indicate the case was dismissed Nolle Pros
 
-# Drug and gun cases by bond type over time
+In the documentation it is defined as "Null: No record of bond found." 
+
+The record of Nolles is in the Disposition data. Match dispositions to CASE_ID in sa_init so see if they preserve cases Nolle-ed at initial bond hearing and, if they do, see if initiation$BOND_TYPE_CURRENT = NULL is a defacto Nolle Pros variable
+
+Testing this real quick by getting rid of narcotics filter and seeing if it goes down. Okay, nope, NULL doesn't seem to be Nolle because red is at almost 50% there. Okay, lets see, initial. Nope, initial and current are the same.
+
 ```{r}
-sa_init_month <- sa_init
-
-sa_init_month$RECEIVED_DATE <- floor_date(sa_init_month$RECEIVED_DATE, "month")
-
 sa_init_month %>%
-  filter(OFFENSE_CATEGORY == c("Narcotics", "UUW - Unlawful Use of Weapon"))
-  group_by(RECEIVED_DATE, OFFENSE_CATEGORY, BOND_TYPE_CURRENT) %>%
-  summarize(n()) %>%
+  filter(OFFENSE_CATEGORY == "Narcotics") %>%
+  
+  # summing cases per month ("n")
+  add_count(RECEIVED_DATE) %>%
+  
+  # summing cases by bond condition ("nn")
+  count(RECEIVED_DATE, BOND_TYPE_INITIAL, `n`) %>%
+  
+  # creating percentage of cases each month ("type_mean")
+  mutate(type_mean = nn / n) %>%
   ggplot(
     mapping = aes(
       x = RECEIVED_DATE,
-      y = `n()`,
-      color = OFFENSE_CATEGORY
-    )) + 
+      y = type_mean,
+      color = BOND_TYPE_INITIAL
+    )
+  ) +
   geom_point() +
   geom_smooth()
+```
 
+# Gun case bond over time
+```{r}
+bond_types <- c("I Bond", "D Bond", "C Bond", "No Bond")
 
+sa_init_month %>%
+  filter(OFFENSE_CATEGORY == "UUW - Unlawful Use of Weapon", 
+         
+         # taking out NULL bond type (need to figure out what's going on there)
+         BOND_TYPE_INITIAL %in% bond_types) %>%
+  
+  # summing cases per month ("n")
+  add_count(RECEIVED_DATE) %>%
+  
+  # summing cases by bond condition ("nn")
+  count(RECEIVED_DATE, BOND_TYPE_INITIAL, `n`) %>%
+  
+  # creating percentage of cases each month ("type_mean")
+  mutate(type_mean = nn / n) %>%
+  ggplot(
+    mapping = aes(
+      x = RECEIVED_DATE,
+      y = type_mean,
+      color = BOND_TYPE_INITIAL
+    )
+  ) +
+  geom_point() +
+  geom_smooth()
 ```
 
 # ASA Data Drug Cases
