@@ -1,0 +1,109 @@
+---
+title: "final_paper_citations"
+author: "Micah Clark Moody"
+date: '2022-08-03'
+output: html_document
+---
+# Final Paper Citations
+This `.Rmd` document has the code for quantitative claims in my final draft of the MA Thesis **title**. For each claim, I'll include the quote and code.
+
+## Setup r
+Import needed packages to run code in the r environment.
+```{r setup}
+library(tidyverse)
+library(lubridate)
+library(knitr)
+library(readr)
+```
+
+## DONE Import data
+Import data needed to run code in the r environment. This analysis only relies on the data I recorded during my obsevations, available in raw form in the "data" folder of this github repository linked [here](https://github.com/MicahCM/bond_court/blob/main/data/data_cleaned.csv). The raw file is available [here](https://raw.githubusercontent.com/MicahCM/bond_court/main/data/data_cleaned.csv) and directly inked in the code.
+
+```{r}
+# importing data from my observations
+# url link is from this github repository
+obs_data <- read.csv(url("https://raw.githubusercontent.com/MicahCM/bond_court/main/data/data_cleaned.csv"))
+
+# coercing numeric variables
+obs_data$can_post <- as.numeric(obs_data$can_post) 
+obs_data$bond_amount <- as.numeric(obs_data$bond_amount)
+
+# creating dummy variable for unaffordable bond 
+# unaffordable bond is defined as can_post is less than bond_amount
+obs_data <- obs_data %>%
+  filter(bond_type == "D") %>%
+  drop_na() %>%
+  mutate("bond_excess" = ifelse(((can_post * 10) < bond_amount), 1, 0)) %>%
+  full_join(obs_data)
+```
+
+## DONE Dismissing low-level drug cases
+__Page 15: "In bond court, ASAs dismiss almost one in five low-level drug cases."__
+
+- "Low-level" is represented by `class_1 == 4` meaning it is a class 4 felony charge
+- "drug case" is represented by `charge_type` which I created as a manual grouping variable
+- "dismiss" is represented by `nole`, a dummy variable for when cases are dismissed. 
+
+Code interpretation: 16% of class 4 drug cases are dismissed by prosecutors
+
+```{r dismissing low-level drug cases}
+obs_data %>%
+  
+  # selecting low-level drug cases
+  filter(
+    class_1 == 4 & (
+      charge_type == "4 - drug sales (manufacture/delivery, PCS with intent)" | 
+      charge_type == "3 - drug possession (PCS)")) %>%
+  
+  # counting dismissed cases (nole)
+  group_by(nole) %>%
+  summarize(n()) %>%
+  
+  # calculating percent dismissed and prosecuted
+  mutate("percent" = ((`n()`/(50))*100)) %>%
+  
+  # printing results
+  kable(col.names = c("Dismissed Case", "Total Count", "Percentage"), caption = "Low-Level (class 4) Drug Case Dismissal Rates")
+```
+
+## Release in low-level cases
+__Page 19: "Affordable bail, money bail less than or equal to the stated ability to pay, is most common in low-level (class 4) felony cases. In low-level cases I observed, the pretrial condition was release without money bail in just under half of cases."__
+```{r release in low-level cases}
+
+```
+
+##
+__Page 20-21: "For example, release on money bail and some type of supervision is the common pretrial condition for defendants charged with gun possession who have a previous gun conviction in their history."__
+```{r}
+```
+
+##
+__Page 24-25: Of the class X gun possession cases I observed, prosecutors requested pretrial jailing half of the time.__
+```{r}
+
+```
+
+## FOID card possession and release conditions
+__Page 28: In a third of class four gun arrests, the defendant is a legal gun owner with a FOID card Illinois gun license...In the cases I observed, nine of ten defendants with a FOID card are released on an I-Bond, the most lenient pretrial condition. In contrast, only two of ten defendants without a FOID card and arrested on gun charges were released on an I-Bond with most given money bail as a pretrial condition.__
+```{r}
+
+```
+
+## BROKEN Drug charges pretrial conditions set overview
+??? get rid of D/NA but keep I/NA???
+__Page 32: Judges release two-thirds of defendants with drug charges...__ 
+
+- Release means 1) an I-Bond was set or 2) an affordable D-Bond was set
+
+__Page 32: I observed consistent money bail and pretrial supervision conditions between both charge categories__
+```{r, eval=FALSE}
+
+test <- data %>%
+  filter(bond_type %in% c("D", "I") & (
+    charge_type == "4 - drug sales (manufacture/delivery, PCS with intent)" |
+      charge_type == "3 - drug possession (PCS)")) %>%
+  group_by(bond_type, bond_excess) %>%
+  summarize(n()) %>%
+  mutate("percent" = (`n()`/(*100)) %>%
+  kable()
+```

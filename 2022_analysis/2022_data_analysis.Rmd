@@ -19,6 +19,8 @@ X in .csv remove ASA, atty, and columns after "notes"
 - vector charge_type to be in order
 - check if I ever use intake data
 
+[SA data](https://datacatalog.cookcountyil.gov/browse?tags=state%27s+attorney+case-level&sortBy=most_accessed)
+
 obs_data notes
 
 sa data notes
@@ -68,7 +70,7 @@ sa_intake <- read.csv("~/Desktop/r/bond_court/data/2022-07-03 CCSAO Data/Intake.
 sa_intake$RECEIVED_DATE <- mdy(sa_intake$RECEIVED_DATE)
 ```
 
-```{r}
+```{r, include = FALSE}
 # IMPORT when using n = 100 obs for coding quickly
 sa_init_full <- read.csv("~/Desktop/r/bond_court/data/2022-07-03 CCSAO Data/Initiation.csv")
 
@@ -498,4 +500,12 @@ VOBB <- data_cleaned %>%
   group_by(charge_1)
 
 4/38
+```
+
+# PSA and release condition relationship
+```{r}
+test <- obs_data %>%
+  filter(psa_nca > 0)
+
+# looking at data quality, I don't think there are enough observations. I can go pull them from my notes but not right now.
 ```
