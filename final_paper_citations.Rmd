@@ -1,25 +1,28 @@
 ---
-title: "final_paper_citations"
+title: "Final Paper Citations"
 author: "Micah Clark Moody"
-date: '2022-08-03'
+date: '2022-07-29'
 output: html_document
 ---
-# Final Paper Citations
-This `.Rmd` document has the code for quantitative claims in my final draft of the MA Thesis **title**. For each claim, I'll include the quote and code.
 
-## Setup r
+### FLAG: Add a TOC
+
+# Final Paper Citations
+This `.Rmd` document has the code for quantitative claims in my final draft of the MA Thesis *“Bond is going to be…”: Setting and justifying pretrial conditions in Cook County Central Bond Court*. For each claim, I'll include the quote and code.
+
+## DONE Setup r environment
 Import needed packages to run code in the r environment.
-```{r setup}
-library(tidyverse)
-library(lubridate)
+```{r setup, message=FALSE}
 library(knitr)
+library(lubridate)
 library(readr)
+library(tidyverse)
 ```
 
 ## DONE Import data
 Import data needed to run code in the r environment. This analysis only relies on the data I recorded during my obsevations, available in raw form in the "data" folder of this github repository linked [here](https://github.com/MicahCM/bond_court/blob/main/data/data_cleaned.csv). The raw file is available [here](https://raw.githubusercontent.com/MicahCM/bond_court/main/data/data_cleaned.csv) and directly inked in the code.
 
-```{r}
+```{r, message=FALSE}
 # importing data from my observations
 # url link is from this github repository
 obs_data <- read.csv(url("https://raw.githubusercontent.com/MicahCM/bond_court/main/data/data_cleaned.csv"))
@@ -28,13 +31,34 @@ obs_data <- read.csv(url("https://raw.githubusercontent.com/MicahCM/bond_court/m
 obs_data$can_post <- as.numeric(obs_data$can_post) 
 obs_data$bond_amount <- as.numeric(obs_data$bond_amount)
 
-# creating dummy variable for unaffordable bond 
+# creating  variable for unaffordable bond
 # unaffordable bond is defined as can_post is less than bond_amount
-obs_data <- obs_data %>%
+d_bond_detail <- obs_data %>%
   filter(bond_type == "D") %>%
-  drop_na() %>%
-  mutate("bond_excess" = ifelse(((can_post * 10) < bond_amount), 1, 0)) %>%
-  full_join(obs_data)
+  mutate("bond_type_detail" = ifelse(((can_post * 10) < bond_amount), 
+                                     "D_affordable", "D_unaffordable"))
+
+# creating new variable "bond_type_detail" that reflects D bond affordability
+obs_data <- obs_data %>%
+  filter(bond_type != "D") %>%
+  mutate("bond_type_detail" = bond_type) %>%
+  rbind(d_bond_detail)
+
+# factoring variables to organize visualization
+# creating levels
+class_order <- c("4", "3", "2", "1", "X")
+bond_order <- c("I", "D", "No bond")
+bond_detail_order <- c("I", "D_affordable", "D_unaffordable", "No bond")
+
+# mutating columns
+obs_data <- obs_data %>%
+  mutate(class_1 = factor(class_1, 
+                          levels = class_order)) %>%
+  mutate(bond_type = factor(bond_type,
+                            levels = bond_order)) %>%
+  mutate(bond_type_detail = factor(bond_type_detail,
+                            levels = bond_detail_order))
+  
 ```
 
 ## DONE Dismissing low-level drug cases
@@ -46,7 +70,7 @@ __Page 15: "In bond court, ASAs dismiss almost one in five low-level drug cases.
 
 Code interpretation: 16% of class 4 drug cases are dismissed by prosecutors
 
-```{r dismissing low-level drug cases}
+```{r dismissing low-level drug cases, message=FALSE}
 obs_data %>%
   
   # selecting low-level drug cases
@@ -66,44 +90,129 @@ obs_data %>%
   kable(col.names = c("Dismissed Case", "Total Count", "Percentage"), caption = "Low-Level (class 4) Drug Case Dismissal Rates")
 ```
 
-## Release in low-level cases
-__Page 19: "Affordable bail, money bail less than or equal to the stated ability to pay, is most common in low-level (class 4) felony cases. In low-level cases I observed, the pretrial condition was release without money bail in just under half of cases."__
-```{r release in low-level cases}
+## DONE Release in low-level cases
+__Page 19: "Affordable bail, money bail less than or equal to the stated ability to pay, is most common in low-level (class 4) felony cases."__
 
+__Page 19: "In low-level cases I observed, the pretrial condition was release without money bail in just under half of cases."__
+
+```{r release in cases, message=FLASE}
+# summing each bond type, separated by D bond affordability
+bond_summary <- obs_data %>%
+  filter(bond_type_detail != ""
+         & class_1 %in% c("1", "2", "3", "4", "X")) %>%
+  group_by(class_1, bond_type_detail) %>%
+  summarize(total = n())
+
+# summing by class 
+bond_class_summary <- aggregate(bond_summary$total,
+            by = list(class_1 = bond_summary$class_1),
+            FUN = sum)
+
+# adding factors to data frame
+bond_summary %>% 
+  left_join(bond_class_summary) %>%
+  mutate(percentage = total / x) %>%
+  
+  # visualizing results
+  ggplot(mapping = aes(
+    x = class_1,
+    y = percentage,
+    fill = bond_type_detail
+  )) + 
+    geom_col(
+      position = position_dodge()
+    )
 ```
 
-##
+## Gun possession with previous conviction(s)
 __Page 20-21: "For example, release on money bail and some type of supervision is the common pretrial condition for defendants charged with gun possession who have a previous gun conviction in their history."__
+
 ```{r}
+obs_data %>%
+  filter(charge_type == "6 - gun possession (prior record)") %>%
+  ggplot(mapping = aes(
+    x = bond_type,
+    fill = condition
+  )) +
+  geom_bar(position = position_dodge())
 ```
 
-##
+## DONE Class X gun possession pretrial conditions
 __Page 24-25: Of the class X gun possession cases I observed, prosecutors requested pretrial jailing half of the time.__
 ```{r}
-
+obs_data %>%
+  
+  # selecting class X gun possession case
+  # called "armed habitual criminal" which I abbreviated as "AHC" in the charge variable
+  filter(charge_1 == "AHC") %>%
+  
+  # graphing results
+  ggplot(mapping = aes(
+    x = bond_type
+  )) + 
+  geom_bar()
 ```
 
-## FOID card possession and release conditions
-__Page 28: In a third of class four gun arrests, the defendant is a legal gun owner with a FOID card Illinois gun license...In the cases I observed, nine of ten defendants with a FOID card are released on an I-Bond, the most lenient pretrial condition. In contrast, only two of ten defendants without a FOID card and arrested on gun charges were released on an I-Bond with most given money bail as a pretrial condition.__
+## DONE FOID card possession and release conditions
+__Page 28: In a third of class four gun arrests, the defendant is a legal gun owner with a FOID card Illinois gun license__
+
 ```{r}
-
+obs_data %>%
+  
+  # isolating class 4 gun arrests where the gun license status is recorded
+  # in 19 class 4 gun cases I did not record the gin license status
+  filter(class_1 == 4, charge_1 == "UUW", gun_license != "") %>%
+  
+  # graphing data
+  ggplot(mapping = aes(
+    x = gun_license
+    )) +
+  geom_bar()
 ```
 
-## BROKEN Drug charges pretrial conditions set overview
-??? get rid of D/NA but keep I/NA???
+__Page 28: In the cases I observed, nine of ten defendants with a FOID card are released on an I-Bond, the most lenient pretrial condition. In contrast, only two of ten defendants without a FOID card and arrested on gun charges were released on an I-Bond with most given money bail as a pretrial condition.__
+
+```{r}
+obs_data %>%
+  
+  # isolating class 4 gun arrests where the gun license status is recorded
+  # in 19 class 4 gun cases with license status I did not record bond type in 4 cases
+  filter(class_1 == 4, 
+         charge_1 == "UUW", 
+         gun_license %in% c("FOID no CCL", "No FOID or CCL"), 
+         bond_type != "") %>%
+  
+  # graphing data
+  ggplot(mapping = aes(
+    x = bond_type
+  )) +
+  geom_bar() +
+  facet_wrap(~gun_license)
+```
+
+## DONE Drug charges pretrial conditions set overview
+
 __Page 32: Judges release two-thirds of defendants with drug charges...__ 
 
 - Release means 1) an I-Bond was set or 2) an affordable D-Bond was set
 
 __Page 32: I observed consistent money bail and pretrial supervision conditions between both charge categories__
-```{r, eval=FALSE}
 
-test <- data %>%
-  filter(bond_type %in% c("D", "I") & (
-    charge_type == "4 - drug sales (manufacture/delivery, PCS with intent)" |
-      charge_type == "3 - drug possession (PCS)")) %>%
-  group_by(bond_type, bond_excess) %>%
-  summarize(n()) %>%
-  mutate("percent" = (`n()`/(*100)) %>%
-  kable()
+```{r}
+obs_data %>%
+  filter(charge_type %in% c("3 - drug possession (PCS)", 
+                            "4 - drug sales (manufacture/delivery, PCS with intent)")
+         
+         # I did not record bond type for 27 drug case observations 
+         & bond_type_detail != "")  %>%
+  mutate(bond_type_detail = factor(bond_type_detail,
+                            levels = bond_detail_order)) %>%
+
+  # data visualization
+  ggplot(mapping = aes(
+    x = bond_type_detail
+  )) + 
+  geom_bar() + 
+  facet_wrap(~ charge_type)
 ```
+

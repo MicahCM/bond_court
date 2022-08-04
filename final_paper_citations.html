@@ -11,9 +11,9 @@
 
 <meta name="author" content="Micah Clark Moody" />
 
-<meta name="date" content="2022-08-03" />
+<meta name="date" content="2022-07-29" />
 
-<title>final_paper_citations</title>
+<title>Final Paper Citations</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -363,9 +363,9 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">final_paper_citations</h1>
+<h1 class="title toc-ignore">Final Paper Citations</h1>
 <h4 class="author">Micah Clark Moody</h4>
-<h4 class="date">2022-08-03</h4>
+<h4 class="date">2022-07-29</h4>
 
 </div>
 
@@ -373,28 +373,16 @@ pre code {
 <div id="final-paper-citations" class="section level1">
 <h1>Final Paper Citations</h1>
 <p>This <code>.Rmd</code> document has the code for quantitative claims
-in my final draft of the MA Thesis <strong>title</strong>. For each
-claim, I’ll include the quote and code.</p>
-<div id="setup-r" class="section level2">
-<h2>Setup r</h2>
+in my final draft of the MA Thesis <em>“Bond is going to be…”: Setting
+and justifying pretrial conditions in Cook County Central Bond
+Court</em>. For each claim, I’ll include the quote and code.</p>
+<div id="done-setup-r-environment" class="section level2">
+<h2>DONE Setup r environment</h2>
 <p>Import needed packages to run code in the r environment.</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-## ✓ tibble  3.1.6     ✓ dplyr   1.0.8
-## ✓ tidyr   1.2.0     ✓ stringr 1.4.0
-## ✓ readr   2.1.2     ✓ forcats 0.5.1</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>library(lubridate)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;lubridate&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     date, intersect, setdiff, union</code></pre>
 <pre class="r"><code>library(knitr)
-library(readr)</code></pre>
+library(lubridate)
+library(readr)
+library(tidyverse)</code></pre>
 </div>
 <div id="done-import-data" class="section level2">
 <h2>DONE Import data</h2>
@@ -422,7 +410,8 @@ obs_data &lt;- obs_data %&gt;%
 <pre><code>## Joining, by = c(&quot;date&quot;, &quot;case&quot;, &quot;judge&quot;, &quot;atty_type&quot;, &quot;app_race&quot;, &quot;gun_case&quot;,
 ## &quot;nole&quot;, &quot;warrant&quot;, &quot;charge_type&quot;, &quot;class_1&quot;, &quot;charge_1&quot;, &quot;class_2&quot;, &quot;charge_2&quot;,
 ## &quot;charge_3&quot;, &quot;gun_license&quot;, &quot;violations&quot;, &quot;can_post&quot;, &quot;bond_amount&quot;,
-## &quot;bond_type&quot;, &quot;condition_notes&quot;, &quot;condition&quot;, &quot;note&quot;, &quot;psa&quot;)</code></pre>
+## &quot;bond_type&quot;, &quot;condition_notes&quot;, &quot;condition&quot;, &quot;note&quot;, &quot;psa_nca&quot;, &quot;psa_fta&quot;,
+## &quot;psa_flag&quot;)</code></pre>
 </div>
 <div id="done-dismissing-low-level-drug-cases" class="section level2">
 <h2>DONE Dismissing low-level drug cases</h2>
